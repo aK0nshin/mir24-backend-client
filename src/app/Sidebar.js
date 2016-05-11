@@ -1,6 +1,6 @@
 import React from 'react';
 import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
+import ListItem from './ListItem';
 import RaisedButton from 'material-ui/RaisedButton';
 import List from './MenuItems'
 
@@ -15,7 +15,7 @@ var Sidebar = React.createClass({
         for (var i in list) {
             elements.push(<p key={i} style={style}>{list[i]['section']}</p>);
             for (var j in list[i]['listItems']) {
-                elements.push(<MenuItem key={j+i} onTouchTap={this.handleClose}>{list[i]['listItems'][j]['name']}</MenuItem>);
+                elements.push(<ListItem id={j+i} key={j+i} path={list[i]['listItems'][j]['link']} handler={this.handleClose} name={list[i]['listItems'][j]['name']}/>);
             }
         }
         return elements;

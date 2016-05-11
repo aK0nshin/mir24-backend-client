@@ -46,6 +46,7 @@ class Main extends React.Component {
       <MuiThemeProvider muiTheme={muiTheme}>
         <div style={styles.container}>
         <Sidebar />
+          {this.props.children}
         </div>
       </MuiThemeProvider>
     );

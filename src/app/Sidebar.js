@@ -6,7 +6,9 @@ import List from './MenuItems'
 
 const style = {
     fontSize: '20px',
-    color: 'rgb(0, 188, 212)'
+    color: 'rgb(0, 188, 212)',
+    textAlign:'left',
+    marginLeft:15
 };
 
 var Sidebar = React.createClass({

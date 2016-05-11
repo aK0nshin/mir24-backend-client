@@ -52,7 +52,7 @@ var Sidebar = React.createClass({
                 docked={false}
                 width={200}
                 open={this.state.open}
-                onRequestChange={this.handleOpen}
+                onRequestChange={this.handleClose}
                 width={250}
             >
                 {this.state.elements}

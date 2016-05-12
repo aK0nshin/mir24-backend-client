@@ -7,7 +7,7 @@ import Sidebar from './Sidebar';
 const styles = {
   container: {
     textAlign: 'center',
-    paddingTop: 200,
+    paddingTop: 50,
   },
 };
 

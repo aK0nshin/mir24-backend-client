@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import Main from './Main';
 import Sample from './Sample';
+import News from './News';
 import {Router, Route, browserHistory} from 'react-router';
 
 //Needed for onTouchTap
@@ -17,6 +18,7 @@ ReactDOM.render(
     <Router history={browserHistory}>
         <Route path="/" component={Main}>
             <Route path="/sample" component={Sample} />
+            <Route path="/news" component={News} />
         </Route>
     </Router>,
     document.getElementById('app')

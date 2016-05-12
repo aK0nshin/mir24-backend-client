@@ -1,9 +1,10 @@
 import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import ListItem from './ListItem';
-import RaisedButton from 'material-ui/RaisedButton';
 import List from './MenuItems'
-
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import ContentAdd from 'material-ui/svg-icons/content/add';
+import AppBar from 'material-ui/AppBar';
 const style = {
     fontSize: '20px',
     color: 'rgb(0, 188, 212)',
@@ -17,7 +18,7 @@ var Sidebar = React.createClass({
         for (var i in list) {
             elements.push(<p key={i} style={style}>{list[i]['section']}</p>);
             for (var j in list[i]['listItems']) {
-                elements.push(<ListItem id={j+i} key={j+i} path={list[i]['listItems'][j]['link']} handler={this.handleClose} name={list[i]['listItems'][j]['name']}/>);
+                elements.push(<ListItem id={j+i} key={j+i} path={list[i]['listItems'][j]['link']} handler={this.handleClose} name={list[i]['listItems'][j]['name']} icon={list[i]['listItems'][j]['icon']}/>);
             }
         }
         return elements;
@@ -40,16 +41,14 @@ var Sidebar = React.createClass({
     },
     render: function (){
         return <div>
-            <RaisedButton
-                style={{
+            <FloatingActionButton style={{
                     position: 'fixed',
                     top: '30px',
                     left: '30px',
                 }}
-                primary={true}
-                label="Разделы"
-                onTouchTap={this.handleOpen}
-            />
+              onTouchTap={this.handleOpen}>
+                <ContentAdd />
+            </FloatingActionButton>
             <Drawer
                 docked={false}
                 width={200}
@@ -57,6 +56,9 @@ var Sidebar = React.createClass({
                 onRequestChange={this.handleClose}
                 width={250}
             >
+                <AppBar
+                    showMenuIconButton={false}
+                    title="Меню" />
                 {this.state.elements}
             </Drawer>
         </div>

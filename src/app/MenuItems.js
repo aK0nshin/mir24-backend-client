@@ -3,32 +3,39 @@ export default [
         "section":"Контент",
         "listItems":[
             {
-                name: 'Видео',
-                link: '/sample'
+                name: 'Новости',
+                link: '/news',
+                icon: 'assignment'
             },
             {
                 name: 'Премьеры',
-                link: '/sample'
+                link: '/sample',
+                icon: 'fiber_new'
             },
             {
                 name: 'Название шоу',
-                link: '/sample'
+                link: '/sample',
+                icon: 'label outline'
             },
             {
                 name: 'Передачи',
-                link: '/sample'
+                link: '/sample',
+                icon: 'movie'
             },
             {
                 name: 'Типы видео',
-                link: '/sample'
+                link: '/sample',
+                icon: 'cloud'
             },
             {
                 name: 'Типы врезки',
-                link: '/sample'
+                link: '/sample',
+                icon: 'cloud'
             },
             {
                 name: 'Типы врезки',
-                link: '/sample'
+                link: '/sample',
+                icon: 'cloud'
             }
         ]
     },
@@ -37,27 +44,33 @@ export default [
         "listItems":[
             {
                 name: 'Пользователи',
-                link: '/sample'
+                link: '/sample',
+                icon: 'cloud'
             },
             {
                 name: 'Конфигурации',
-                link: '/sample'
+                link: '/sample',
+                icon: 'cloud'
             },
             {
                 name: 'Сервис-провайдер',
-                link: '/sample'
+                link: '/sample',
+                icon: 'cloud'
             },
             {
                 name: 'Филиалы',
-                link: '/sample'
+                link: '/sample',
+                icon: 'cloud'
             },
             {
                 name: 'Роли пользователей',
-                link: '/sample'
+                link: '/sample',
+                icon: 'cloud'
             },
             {
                 name: 'Группы ролей',
-                link: '/sample'
+                link: '/sample',
+                icon: 'cloud'
             }
         ]
     }

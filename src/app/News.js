@@ -66,7 +66,7 @@ const News = React.createClass({
                     <TableHeaderColumn tooltip="Имеются фотки чтоле" style={{width:35}}><FontIcon className="material-icons" style={{color:'#9E9E9E'}}>camera_alt</FontIcon></TableHeaderColumn>
                     <TableHeaderColumn tooltip="Дата создания">Дата</TableHeaderColumn>
                     <TableHeaderColumn tooltip="Заголовок новости" style={{width:'30%'}}>Заголовок</TableHeaderColumn>
-                    <TableHeaderColumn tooltip="Рубрика новости">Рубрика</TableHeaderColumn>
+                    <TableHeaderColumn tooltip="Супертег новости">Супертег</TableHeaderColumn>
                     <TableHeaderColumn tooltip="Последний редактор">Посл. редактировал</TableHeaderColumn>
                     <TableHeaderColumn tooltip="Создал новость">Создал</TableHeaderColumn>
                 </TableRow>

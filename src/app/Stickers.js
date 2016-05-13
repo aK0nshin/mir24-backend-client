@@ -1,6 +1,8 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
-
+import Avatar from 'material-ui/Avatar';
+import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import FlatButton from 'material-ui/FlatButton';
 const messages = [
     {
         to: [
@@ -119,9 +121,19 @@ const Stickers = React.createClass({
                 to+=row.to[i]+', ';
             }
             to = to.slice(0, -2);
-            return <Paper key={index} style={paperStyle} zDepth={2}>
-                <span className='to'>Кому: <span className="toName">{to}</span></span><span className="from">От: <span className="fromName">{row.from}</span></span><p className='messageText' style={{color: that.colors[row.label]}}>{row.text}</p>
-                </Paper>
+            return  <Card style={{marginBottom: '20px'}} key={index}>
+                <CardHeader
+                    title={row.from}
+                    subtitle="13.02.1990 21:39"
+                    avatar="http://lorempixel.com/100/100/nature/"
+                />
+                <CardText style={{color:that.colors[row.label], fontSize: 16}}>
+                    {row.text}
+                </CardText>
+                <CardActions>
+                    <FlatButton label="Понял" />
+                </CardActions>
+            </Card>
         }).reverse();
     },
     
@@ -131,11 +143,9 @@ const Stickers = React.createClass({
         }
     },
     render: function (){
-        return <div>
+        return <div style={{padding: "14px 24px 24px"}}>
             <h1 className="messagesTitle">Сообщения</h1>
-            <div className="messageBox">
             {this.state.stickers}
-            </div>
             </div>
     }
 });

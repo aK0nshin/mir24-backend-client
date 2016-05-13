@@ -45,7 +45,7 @@ class Main extends React.Component {
 
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
-        <div style={styles.container}>
+        <div>
         <Sidebar />
           {(this.props.routes.length==1 && this.props.routes[0].path=='/') ? <Stickers/>: ''}
           {this.props.children}

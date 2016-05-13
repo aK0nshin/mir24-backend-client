@@ -4,36 +4,11 @@ import Paper from 'material-ui/Paper';
 const messages = [
     {
         to: [
-            'Дмитрий Юрчев'
-        ],
-        from: 'Пономарев Андрей',
-        text : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dignissim id turpis at iaculis. Curabitur iaculis diam vel erat commodo auctor. Nam id interdum nulla, eu lacinia elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla quis leo eget eros commodo aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras a tristique lacus, eget pharetra nibh.',
-        label: 'regular'
-    },
-    {
-        to: [
             'Дмитрий Юрчев',
             'Александр Коншин'
         ],
         from: 'Пономарев Андрей',
         text : ' Завтра же переходим на Laravel и PHP7',
-        label: 'regular'
-    },
-    {
-        to: [
-            'Саша Коншин'
-        ],
-        from: 'Пономарев Андрей',
-        text : 'Mauris sed nisi vestibulum, facilisis massa non, dignissim risus. Morbi rutrum eros dui, ac blandit nunc fringilla eget. Ut mollis, lacus a accumsan feugiat, neque urna consequat urna, ut semper massa orci quis augue. ',
-        label: 'regular'
-    },
-    {
-        to: [
-            'Никита Кириченко',
-            'Ксения Новинская'
-        ],
-        from: 'Пономарев Андрей',
-        text : 'Не расслабляйтесь!',
         label: 'alarm'
     },
     {
@@ -47,45 +22,11 @@ const messages = [
     },
     {
         to: [
-            'Дмитрий Юрчев'
-        ],
-        from: 'Пономарев Андрей',
-        text : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dignissim id turpis at iaculis. Curabitur iaculis diam vel erat commodo auctor. Nam id interdum nulla, eu lacinia elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla quis leo eget eros commodo aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras a tristique lacus, eget pharetra nibh.',
-        label: 'regular'
-    },
-    {
-        to: [
-            'Дмитрий Юрчев',
-            'Александр Коншин'
-        ],
-        from: 'Пономарев Андрей',
-        text : ' Завтра же переходим на Laravel и PHP7',
-        label: 'regular'
-    },
-    {
-        to: [
-            'Саша Коншин'
-        ],
-        from: 'Пономарев Андрей',
-        text : 'Mauris sed nisi vestibulum, facilisis massa non, dignissim risus. Morbi rutrum eros dui, ac blandit nunc fringilla eget. Ut mollis, lacus a accumsan feugiat, neque urna consequat urna, ut semper massa orci quis augue. ',
-        label: 'regular'
-    },
-    {
-        to: [
-            'Никита Кириченко',
-            'Ксения Новинская'
-        ],
-        from: 'Пономарев Андрей',
-        text : 'Не расслабляйтесь!',
-        label: 'alarm'
-    },
-    {
-        to: [
             'Мария Чегляева',
             'Павел Беляев'
         ],
         from: 'Пономарев Андрей',
-        text : 'Посмотреть раздел "Новости"',
+        text : 'Посмотреть меню',
         label: 'event'
     },
 ];
@@ -132,7 +73,6 @@ const Stickers = React.createClass({
     },
     render: function (){
         return <div>
-            <h1 className="messagesTitle">Сообщения</h1>
             <div className="messageBox">
             {this.state.stickers}
             </div>

@@ -3,6 +3,7 @@ import {deepOrange500} from 'material-ui/styles/colors';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Sidebar from './Sidebar';
+import Stickers from './Stickers';
 
 const styles = {
   container: {
@@ -46,6 +47,7 @@ class Main extends React.Component {
       <MuiThemeProvider muiTheme={muiTheme}>
         <div style={styles.container}>
         <Sidebar />
+          {(this.props.routes.length==1 && this.props.routes[0].path=='/') ? <Stickers/>: ''}
           {this.props.children}
         </div>
       </MuiThemeProvider>

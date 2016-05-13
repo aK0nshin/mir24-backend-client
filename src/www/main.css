@@ -1,9 +1,38 @@
 html {
   font-family: 'Roboto', sans-serif;
+  height:100%;
 }
 
 body {
   font-size: 13px;
   line-height: 20px;
   margin:0;
+  height:100%;
+}
+#app {
+  height:100%;
+}
+.to {
+  font-size:15px;
+  margin-left: 5px;
+}
+.from {
+  position: absolute;
+  bottom:10px;
+  right:15px;
+  font-size:15px;
+}
+.messageText {
+  font-size: 15px;
+  margin-bottom: 35px;
+  margin-left: 5px;
+}
+.toName{
+  color:#607D8B;
+}
+.fromName{
+  color:#607D8B;
+}
+.messagesTitle {
+  margin-bottom: 65px;
 }

@@ -60,6 +60,7 @@ var Sidebar = React.createClass({
                 <AppBar
                     showMenuIconButton={false}
                     title="Меню" />
+                <ListItem name='Сообщения' handler={this.handleClose} path='/' icon='email'/>
                 {this.state.elements}
             </Drawer>
         </div>

@@ -8,7 +8,7 @@ export default [
                 icon: 'assignment'
             },
             {
-                name: 'Премьеры',
+                name: 'Лица мира',
                 link: '/sample',
                 icon: 'fiber_new'
             },

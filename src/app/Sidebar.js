@@ -3,8 +3,8 @@ import Drawer from 'material-ui/Drawer';
 import ListItem from './ListItem';
 import List from './MenuItems'
 import FloatingActionButton from 'material-ui/FloatingActionButton';
-import ContentAdd from 'material-ui/svg-icons/content/add';
 import AppBar from 'material-ui/AppBar';
+import FontIcon from 'material-ui/FontIcon';
 const style = {
     fontSize: '20px',
     color: 'rgb(0, 188, 212)',
@@ -47,7 +47,7 @@ var Sidebar = React.createClass({
                     left: '30px',
                 }}
               onTouchTap={this.handleOpen}>
-                <ContentAdd />
+                <FontIcon className="material-icons" style={{color:'#B0BEC5'}}>menu</FontIcon>
             </FloatingActionButton>
             <Drawer
                 docked={false}

@@ -45,6 +45,7 @@ var Sidebar = React.createClass({
                     position: 'fixed',
                     top: '30px',
                     left: '30px',
+                    zIndex:10
                 }}
               onTouchTap={this.handleOpen}>
                 <FontIcon className="material-icons" style={{color:'#B0BEC5'}}>menu</FontIcon>

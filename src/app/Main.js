@@ -7,7 +7,6 @@ import Stickers from './Stickers';
 
 const styles = {
   container: {
-    textAlign: 'center',
     paddingTop: 50,
   },
 };
@@ -45,7 +44,7 @@ class Main extends React.Component {
 
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
-        <div>
+        <div style={styles.container}>
         <Sidebar />
           {(this.props.routes.length==1 && this.props.routes[0].path=='/') ? <Stickers/>: ''}
           {this.props.children}

@@ -39,7 +39,7 @@ const News = React.createClass({
     },
     render: function (){
         return <div>
-            <h1>Новости</h1>
+            <h1 style={{textAlign:'center'}}>Новости</h1>
             <FloatingActionButton style={{
                     position: 'fixed',
                     top: '102px',

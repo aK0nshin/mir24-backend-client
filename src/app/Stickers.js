@@ -84,7 +84,7 @@ const Stickers = React.createClass({
         }
     },
     render: function (){
-        return <div style={{padding: "14px 24px 24px"}}>
+        return <div style={{padding: "14px 24px 24px 70%"}}>
             {this.state.stickers}
             </div>
     }

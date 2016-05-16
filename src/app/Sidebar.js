@@ -11,6 +11,9 @@ const style = {
     textAlign:'left',
     marginLeft:15
 };
+const fix = {
+    overflowX:'hidden'
+};
 
 var Sidebar = React.createClass({
     getList: function (list){
@@ -51,8 +54,8 @@ var Sidebar = React.createClass({
                 <FontIcon className="material-icons" style={{color:'#B0BEC5'}}>menu</FontIcon>
             </FloatingActionButton>
             <Drawer
+                containerStyle={fix}
                 docked={false}
-                width={200}
                 open={this.state.open}
                 onRequestChange={this.handleClose}
                 width={250}

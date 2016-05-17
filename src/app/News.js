@@ -2,6 +2,7 @@ import React from 'react';
 import {Table, TableBody, TableFooter, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
 import TableData from './TableData'
 import FontIcon from 'material-ui/FontIcon';
+import InfoDropdown from './InfoDropdown';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 
 const style = {
@@ -17,15 +18,45 @@ const News = React.createClass({
               if  (row[i] === '') row[i] = ' ';
           }
           return <TableRow style={{background: index%2==0 ? '#FFF' : '#E0E0E0'}} key={index}>
-              <TableRowColumn style={style}><FontIcon className="material-icons" style={{color:'#FFC107', cursor:'pointer'}}>edit</FontIcon></TableRowColumn>
-              <TableRowColumn style={style}><FontIcon className="material-icons" style={{color:row.circle ? '#4CAF50':'#B0BEC5'}}>fiber_manual_record</FontIcon></TableRowColumn>
-              <TableRowColumn style={{width:85}}>{row.id}</TableRowColumn>
-              <TableRowColumn style={{width:35}}><FontIcon className="material-icons" style={{color:row.foto ? '#4CAF50':'#B0BEC5'}}>collections</FontIcon></TableRowColumn>
-              <TableRowColumn>{row.date}</TableRowColumn>
-              <TableRowColumn style={{width:'30%'}}>{row.title}</TableRowColumn>
-              <TableRowColumn>{row.rubric}</TableRowColumn>
-              <TableRowColumn>{row.lastedit}</TableRowColumn>
-              <TableRowColumn>{row.author}</TableRowColumn>
+              <TableRowColumn style={style}>
+                  <InfoDropdown id={row.id}/>
+              </TableRowColumn>
+              <TableRowColumn style={style}>
+                  <FontIcon className="material-icons" style={{color:'#FFC107', cursor:'pointer'}}>
+                      edit
+                  </FontIcon>
+              </TableRowColumn>
+              <TableRowColumn style={style}>
+                  <FontIcon className="material-icons" style={{color:row.circle ? '#4CAF50':'#B0BEC5'}}>
+                        fiber_manual_record
+                  </FontIcon>
+              </TableRowColumn>
+              <TableRowColumn style={{width:35}}>
+                  <FontIcon className="material-icons" style={{color:row.foto ? '#4CAF50':'#B0BEC5'}}>
+                      collections
+                  </FontIcon>
+              </TableRowColumn>
+              <TableRowColumn>
+                  {row.date}
+              </TableRowColumn>
+              <TableRowColumn style={{width:'30%'}}>
+                  {row.title}
+              </TableRowColumn>
+              <TableRowColumn>
+                  {row.rubric}
+              </TableRowColumn>
+              <TableRowColumn>
+                  {row.videoAdd}
+              </TableRowColumn>
+              <TableRowColumn>
+                  {row.photoAdd}
+              </TableRowColumn>
+              <TableRowColumn>
+                  {row.lastedit}
+              </TableRowColumn>
+              <TableRowColumn>
+                  {row.author}
+              </TableRowColumn>
             </TableRow>;
       });
     },
@@ -62,11 +93,13 @@ const News = React.createClass({
                 <TableRow>
                     <TableHeaderColumn style={{width:43, padding:0}}> </TableHeaderColumn>
                     <TableHeaderColumn style={{width:43, padding:0}}> </TableHeaderColumn>
-                    <TableHeaderColumn tooltip="ID новости" style={{width:85}}>ID</TableHeaderColumn>
+                    <TableHeaderColumn style={{width:43, padding:0}}> </TableHeaderColumn>
                     <TableHeaderColumn tooltip="Имеются фотки чтоле" style={{width:35}}><FontIcon className="material-icons" style={{color:'#9E9E9E'}}>camera_alt</FontIcon></TableHeaderColumn>
                     <TableHeaderColumn tooltip="Дата создания">Дата</TableHeaderColumn>
                     <TableHeaderColumn tooltip="Заголовок новости" style={{width:'30%'}}>Заголовок</TableHeaderColumn>
                     <TableHeaderColumn tooltip="Супертег новости">Супертег</TableHeaderColumn>
+                    <TableHeaderColumn tooltip="Кто залил фото">Залил фото</TableHeaderColumn>
+                    <TableHeaderColumn tooltip="Кто залил видео">Залил видео</TableHeaderColumn>
                     <TableHeaderColumn tooltip="Последний редактор">Посл. редактировал</TableHeaderColumn>
                     <TableHeaderColumn tooltip="Создал новость">Создал</TableHeaderColumn>
                 </TableRow>

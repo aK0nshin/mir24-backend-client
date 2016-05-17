@@ -7,7 +7,9 @@ export default [
         rubric: 'Путеводитель',
         lastedit: 'safronova-anzhelika@yandex.ru',
         author: 'mineev_sa@mirtv.ru',
-        circle:true
+        videoAdd: 'mineev_sa@mirtv.ru',
+        photoAdd: 'mineev_sa@mirtv.ru',
+        status: 1
     },
     {
         id: '6530091',
@@ -17,7 +19,9 @@ export default [
         rubric: 'Спорт',
         lastedit: 'novikova_mv@mirtv.ru',
         author: 'novikova_mv@mirtv.ru',
-        circle:true
+        videoAdd: 'mineev_sa@mirtv.ru',
+        photoAdd: 'mineev_sa@mirtv.ru',
+        status:2
     },
     {
         id: '6530092',
@@ -27,7 +31,9 @@ export default [
         rubric: 'Политика',
         lastedit: 'novikova_mv@mirtv.ru',
         author: 'novikova_mv@mirtv.ru',
-        circle:true
+        videoAdd: 'mineev_sa@mirtv.ru',
+        photoAdd: 'mineev_sa@mirtv.ru',
+        status:3
     },
     {
         id: '6530093',
@@ -37,7 +43,9 @@ export default [
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'Общество',
-        circle:true
+        videoAdd: 'mineev_sa@mirtv.ru',
+        photoAdd: 'mineev_sa@mirtv.ru',
+        status:1
     },
     {
         id: '6530094',
@@ -47,7 +55,9 @@ export default [
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'В мире',
-        circle:false
+        videoAdd: 'mineev_sa@mirtv.ru',
+        photoAdd: 'mineev_sa@mirtv.ru',
+        status:2
     },
     {
         id: '6530095',
@@ -57,7 +67,9 @@ export default [
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'В мире',
-        circle:false,
+        videoAdd: 'mineev_sa@mirtv.ru',
+        photoAdd: 'mineev_sa@mirtv.ru',
+        status:3
     },
     {
         id: '6530096',
@@ -67,7 +79,9 @@ export default [
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'Общество',
-        circle:true
+        videoAdd: 'mineev_sa@mirtv.ru',
+        photoAdd: 'mineev_sa@mirtv.ru',
+        status:1
     },
     {
         id: '6530097',
@@ -77,7 +91,9 @@ export default [
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'Общество',
-        circle:false
+        videoAdd: 'mineev_sa@mirtv.ru',
+        photoAdd: 'mineev_sa@mirtv.ru',
+        status:2
     },
     {
         id: '6530098',
@@ -87,7 +103,9 @@ export default [
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'Шоу-бизнес',
-        circle:false
+        videoAdd: 'mineev_sa@mirtv.ru',
+        photoAdd: 'mineev_sa@mirtv.ru',
+        status:3
     },
     {
         id: '6530099',
@@ -97,7 +115,9 @@ export default [
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'Общество',
-        circle:true
+        videoAdd: 'mineev_sa@mirtv.ru',
+        photoAdd: 'mineev_sa@mirtv.ru',
+        status:4
     },
     {
         id: '65380',
@@ -107,7 +127,9 @@ export default [
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'Общество',
-        circle:true
+        videoAdd: 'mineev_sa@mirtv.ru',
+        photoAdd: 'mineev_sa@mirtv.ru',
+        status:4
     },
     {
         id: '653480',
@@ -117,7 +139,9 @@ export default [
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'Общество',
-        circle:true
+        videoAdd: 'mineev_sa@mirtv.ru',
+        photoAdd: 'mineev_sa@mirtv.ru',
+        status:3
     },
     {
         id: '656580',
@@ -127,7 +151,9 @@ export default [
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'Стиль жизни',
-        circle:true
+        videoAdd: 'mineev_sa@mirtv.ru',
+        photoAdd: 'mineev_sa@mirtv.ru',
+        status:4
     },
     {
         id: '6526580',
@@ -137,7 +163,9 @@ export default [
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'Культура',
-        circle:false
+        videoAdd: 'mineev_sa@mirtv.ru',
+        photoAdd: 'mineev_sa@mirtv.ru',
+        status:2
     },
     {
         id: '435456',
@@ -146,6 +174,9 @@ export default [
         foto: false,
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
+        videoAdd: 'mineev_sa@mirtv.ru',
+        photoAdd: 'mineev_sa@mirtv.ru',
         rubric: 'В содружестве',
+        status:2
     },
 ]

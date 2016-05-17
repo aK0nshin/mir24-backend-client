@@ -3,6 +3,8 @@ import {Table, TableBody, TableFooter, TableHeader, TableHeaderColumn, TableRow,
 import TableData from './TableData'
 import FontIcon from 'material-ui/FontIcon';
 import InfoDropdown from './InfoDropdown';
+import Order from './Order';
+import Search from './Search';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 
 const style = {
@@ -82,7 +84,10 @@ const News = React.createClass({
                 onTouchTap={this.smallAlert}>
                 <FontIcon className="material-icons" style={{color:'#B0BEC5'}}>add</FontIcon>
             </FloatingActionButton>
-        <Table
+            <Search />
+            <div style={{minWidth:1500}}>
+
+            <Table
         selectable={false}
         multiSelectable={false}
         >
@@ -91,16 +96,16 @@ const News = React.createClass({
                 adjustForCheckbox={false}
             >
                 <TableRow>
-                    <TableHeaderColumn style={{width:43, padding:0}}> </TableHeaderColumn>
-                    <TableHeaderColumn style={{width:43, padding:0}}> </TableHeaderColumn>
-                    <TableHeaderColumn style={{width:43, padding:0}}> </TableHeaderColumn>
+                    <TableHeaderColumn style={{width:23, padding:0}}> </TableHeaderColumn>
+                    <TableHeaderColumn style={{width:23, padding:0}}> </TableHeaderColumn>
+                    <TableHeaderColumn style={{width:23, padding:0}}> </TableHeaderColumn>
                     <TableHeaderColumn tooltip="Имеются фотки чтоле" style={{width:35}}><FontIcon className="material-icons" style={{color:'#9E9E9E'}}>camera_alt</FontIcon></TableHeaderColumn>
-                    <TableHeaderColumn tooltip="Дата создания">Дата</TableHeaderColumn>
+                    <TableHeaderColumn>Дата <Order row='Тут передадим поле для ордера'/></TableHeaderColumn>
                     <TableHeaderColumn tooltip="Заголовок новости" style={{width:'30%'}}>Заголовок</TableHeaderColumn>
-                    <TableHeaderColumn tooltip="Супертег новости">Супертег</TableHeaderColumn>
-                    <TableHeaderColumn tooltip="Кто залил фото">Залил фото</TableHeaderColumn>
-                    <TableHeaderColumn tooltip="Кто залил видео">Залил видео</TableHeaderColumn>
-                    <TableHeaderColumn tooltip="Последний редактор">Посл. редактировал</TableHeaderColumn>
+                    <TableHeaderColumn tooltip="Супертег новости">Супертег <Order row='Тут передадим поле для ордера'/></TableHeaderColumn>
+                    <TableHeaderColumn tooltip="Кто залил фото">Залил фото <Order row='Тут передадим поле для ордера'/></TableHeaderColumn>
+                    <TableHeaderColumn tooltip="Кто залил видео">Залил видео <Order row='Тут передадим поле для ордера'/></TableHeaderColumn>
+                    <TableHeaderColumn tooltip="Последний редактор">Посл. редактировал <Order row='Тут передадим поле для ордера'/></TableHeaderColumn>
                     <TableHeaderColumn tooltip="Создал новость">Создал</TableHeaderColumn>
                 </TableRow>
             </TableHeader>
@@ -110,6 +115,7 @@ const News = React.createClass({
                 {this.state.content}
             </TableBody>
         </Table>
+                </div>
             </div>;
     }
 });

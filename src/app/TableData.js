@@ -1,7 +1,6 @@
 export default [
     {
         id: '6476557',
-        foto: true,
         date: '2013-02-18 11:00:00.0',
         title: 'Секреты БДТ: что происходит за кулисами знаменитого театра',
         rubric: 'Путеводитель',
@@ -9,11 +8,13 @@ export default [
         author: 'mineev_sa@mirtv.ru',
         videoAdd: 'mineev_sa@mirtv.ru',
         photoAdd: 'mineev_sa@mirtv.ru',
-        status: 1
+        status: 'active',
+        photo: true,
+        video: false,
+        gallery: true
     },
     {
         id: '6530091',
-        foto: true,
         date: '2013-02-22 11:48:00.0',
         title: 'Футбольный матч на Украине завершился кулачным боем',
         rubric: 'Спорт',
@@ -21,11 +22,13 @@ export default [
         author: 'novikova_mv@mirtv.ru',
         videoAdd: 'mineev_sa@mirtv.ru',
         photoAdd: 'mineev_sa@mirtv.ru',
-        status:2
+        status:'embargo',
+        photo: true,
+        video: false,
+        gallery: true
     },
     {
         id: '6530092',
-        foto: true,
         date: '2013-02-22 11:48:00.0',
         title: 'Луценко стал новым генпрокурором Украины',
         rubric: 'Политика',
@@ -33,150 +36,177 @@ export default [
         author: 'novikova_mv@mirtv.ru',
         videoAdd: 'mineev_sa@mirtv.ru',
         photoAdd: 'mineev_sa@mirtv.ru',
-        status:3
+        status:'active',
+        photo: false,
+        video: true,
+        gallery: true
     },
     {
         id: '6530093',
         title: 'Зубр в ростовском зоопарке объелся булочками и умер',
         date: '2013-02-22 11:48:00.0',
-        foto: false,
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'Общество',
         videoAdd: 'mineev_sa@mirtv.ru',
         photoAdd: 'mineev_sa@mirtv.ru',
-        status:1
+        status:'active',
+        photo: false,
+        video: true,
+        gallery: true
     },
     {
         id: '6530094',
         title: 'ВОЗ назвала самые загрязненные города мира',
         date: '2013-02-22 11:48:00.0',
-        foto: false,
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'В мире',
         videoAdd: 'mineev_sa@mirtv.ru',
         photoAdd: 'mineev_sa@mirtv.ru',
-        status:2
+        status:'removed',
+        photo: true,
+        video: true,
+        gallery: true
     },
     {
         id: '6530095',
         title: 'Пятнадцать человек чудом спаслись, дрейфуя месяц в открытом океане',
         date: '2013-02-22 11:48:00.0',
-        foto: false,
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'В мире',
         videoAdd: 'mineev_sa@mirtv.ru',
         photoAdd: 'mineev_sa@mirtv.ru',
-        status:3
+        status:'embargo',
+        photo: true,
+        video: true,
+        gallery: true
     },
     {
         id: '6530096',
         title: 'Подружившиеся львенок и пума стали конкурентами Тимура и Амура',
         date: '2013-02-22 11:48:00.0',
-        foto: false,
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'Общество',
         videoAdd: 'mineev_sa@mirtv.ru',
         photoAdd: 'mineev_sa@mirtv.ru',
-        status:1
+        status:'removed',
+        photo: false,
+        video: true,
+        gallery: true
     },
     {
         id: '6530097',
         title: 'Эстония передала Украине древний меч викингов',
         date: '2013-02-22 11:48:00.0',
-        foto: true,
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'Общество',
         videoAdd: 'mineev_sa@mirtv.ru',
         photoAdd: 'mineev_sa@mirtv.ru',
-        status:2
+        status:'inactive',
+        photo: true,
+        video: false,
+        gallery: true
     },
     {
         id: '6530098',
         title: 'Федор Бондарчук отмечает День рождения',
         date: '2013-02-22 11:48:00.0',
-        foto: true,
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'Шоу-бизнес',
         videoAdd: 'mineev_sa@mirtv.ru',
         photoAdd: 'mineev_sa@mirtv.ru',
-        status:3
+        status:'inactive',
+        photo: false,
+        video: false,
+        gallery: false
     },
     {
         id: '6530099',
         title: 'Омские коллекторы задолжали школьной учительнице 130 тысяч рублей',
         date: '2013-02-22 11:48:00.0',
-        foto: true,
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'Общество',
         videoAdd: 'mineev_sa@mirtv.ru',
         photoAdd: 'mineev_sa@mirtv.ru',
-        status:4
+        status:'embargo',
+        photo: true,
+        video: true,
+        gallery: false
     },
     {
         id: '65380',
         title: 'Грузия чествует Андрея Первозванного',
         date: '2013-02-22 11:48:00.0',
-        foto: false,
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'Общество',
         videoAdd: 'mineev_sa@mirtv.ru',
         photoAdd: 'mineev_sa@mirtv.ru',
-        status:4
+        status:'embargo',
+        photo: true,
+        video: false,
+        gallery: true
     },
     {
         id: '653480',
         title: 'Генерал, оторвавший ручку у «УАЗ-Патриот», рассмешил Путина',
         date: '2013-02-22 11:48:00.0',
-        foto: false,
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'Общество',
         videoAdd: 'mineev_sa@mirtv.ru',
         photoAdd: 'mineev_sa@mirtv.ru',
-        status:3
+        status:'active',
+        photo: true,
+        video: true,
+        gallery: false
     },
     {
         id: '656580',
         title: '15 вкуснейших смузи для завтрака и десерта',
         date: '2013-02-22 11:48:00.0',
-        foto: false,
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'Стиль жизни',
         videoAdd: 'mineev_sa@mirtv.ru',
         photoAdd: 'mineev_sa@mirtv.ru',
-        status:4
+        status:'active',
+        photo: true,
+        video: false,
+        gallery: true
     },
     {
         id: '6526580',
         title: 'Виртуальное кино: фильмы, снятые по мотивам компьютерных игр',
         date: '2013-02-22 11:48:00.0',
-        foto: true,
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         rubric: 'Культура',
         videoAdd: 'mineev_sa@mirtv.ru',
         photoAdd: 'mineev_sa@mirtv.ru',
-        status:2
+        status:'inactive',
+        photo: true,
+        video: true,
+        gallery: true
     },
     {
         id: '435456',
         title: 'Медведев: России и Беларуси нужно продвигать товары на внешние рынки',
         date: '2013-02-22 11:48:00.0',
-        foto: false,
         author: 'novikova_mv@mirtv.ru',
         lastedit: 'novikova_mv@mirtv.ru',
         videoAdd: 'mineev_sa@mirtv.ru',
         photoAdd: 'mineev_sa@mirtv.ru',
         rubric: 'В содружестве',
-        status:2
+        status:'active',
+        photo: false,
+        video: true,
+        gallery: true
     },
 ]

@@ -13,6 +13,25 @@ const style = {
     paddingRight:10,
 };
 
+const statusIcons = {
+    embargo: {
+        color: '#F57C00',
+        icon: 'timelapse'
+    },
+    active: {
+        color: '#4CAF50',
+        icon: 'fiber_manual_record'
+    },
+    inactive: {
+        color: '#9E9E9E',
+        icon: 'fiber_manual_record'
+    },
+    removed: {
+        color: '#EF5350',
+        icon: 'delete'
+    }
+};
+
 const News = React.createClass({
     makeStructure: function (raw) {
       return raw.map(function(row, index){
@@ -29,19 +48,25 @@ const News = React.createClass({
                   </FontIcon>
               </TableRowColumn>
               <TableRowColumn style={style}>
-                  <FontIcon className="material-icons" style={{color:row.circle ? '#4CAF50':'#B0BEC5'}}>
-                        fiber_manual_record
+                  <FontIcon className="material-icons" style={{color:statusIcons[row.status].color}}>
+                      {statusIcons[row.status].icon}
                   </FontIcon>
               </TableRowColumn>
-              <TableRowColumn style={{width:35}}>
-                  <FontIcon className="material-icons" style={{color:row.foto ? '#4CAF50':'#B0BEC5'}}>
+              <TableRowColumn style={{width:80, padding:0, textAlign:'center'}}>
+                  <FontIcon className="material-icons badges" style={{display:row.photo ? 'inline-block':'none'}}>
+                      photo_camera
+                  </FontIcon>
+                  <FontIcon className="material-icons badges" style={{display:row.video ? 'inline-block':'none'}}>
+                      videocam
+                  </FontIcon>
+                  <FontIcon className="material-icons badges" style={{display:row.gallery ? 'inline-block':'none'}}>
                       collections
                   </FontIcon>
               </TableRowColumn>
               <TableRowColumn>
                   {row.date}
               </TableRowColumn>
-              <TableRowColumn style={{width:'30%'}}>
+              <TableRowColumn style={{width:'25%'}}>
                   {row.title}
               </TableRowColumn>
               <TableRowColumn>
@@ -99,9 +124,9 @@ const News = React.createClass({
                     <TableHeaderColumn style={{width:23, padding:0}}> </TableHeaderColumn>
                     <TableHeaderColumn style={{width:23, padding:0}}> </TableHeaderColumn>
                     <TableHeaderColumn style={{width:23, padding:0}}> </TableHeaderColumn>
-                    <TableHeaderColumn tooltip="Имеются фотки чтоле" style={{width:35}}><FontIcon className="material-icons" style={{color:'#9E9E9E'}}>camera_alt</FontIcon></TableHeaderColumn>
+                    <TableHeaderColumn style={{width:80, padding:0}}> </TableHeaderColumn>
                     <TableHeaderColumn>Дата <Order row='Тут передадим поле для ордера'/></TableHeaderColumn>
-                    <TableHeaderColumn tooltip="Заголовок новости" style={{width:'30%'}}>Заголовок</TableHeaderColumn>
+                    <TableHeaderColumn tooltip="Заголовок новости" style={{width:'25%'}}>Заголовок</TableHeaderColumn>
                     <TableHeaderColumn tooltip="Супертег новости">Супертег <Order row='Тут передадим поле для ордера'/></TableHeaderColumn>
                     <TableHeaderColumn tooltip="Кто залил фото">Залил фото <Order row='Тут передадим поле для ордера'/></TableHeaderColumn>
                     <TableHeaderColumn tooltip="Кто залил видео">Залил видео <Order row='Тут передадим поле для ордера'/></TableHeaderColumn>

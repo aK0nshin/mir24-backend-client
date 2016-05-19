@@ -64,3 +64,17 @@ td, th {
   font-size:20px !important;
   color:#9C9C9C !important;
 }
+.datePicker>input {
+  text-align:center;
+  cursor: pointer;
+}
+.drop>div div{
+  padding-right:0 !important;
+}
+.timeTitle {
+  float:left;
+  padding-top: 14px;
+}
+.count {
+  text-align: center;
+}

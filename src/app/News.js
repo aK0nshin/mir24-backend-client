@@ -10,6 +10,7 @@ import Cut from './Cut';
 import DiffDialog from './DiffDialog';
 import Ee from 'event-emitter';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
+import {browserHistory, Link} from 'react-router';
 
 const style = {
     width:23,
@@ -30,9 +31,9 @@ const News = React.createClass({
                   <InfoDropdown id={row.id}/>
               </TableRowColumn>
               <TableRowColumn style={style}>
-                  <FontIcon className="material-icons" style={{color:'#FFC107', cursor:'pointer'}}>
+                  <Link to="/article/edit/"><FontIcon className="material-icons" style={{color:'#FFC107', cursor:'pointer'}}>
                       edit
-                  </FontIcon>
+                  </FontIcon></Link>
               </TableRowColumn>
               <TableRowColumn style={style}>
                   <NewsStatus articleStatus={row.status}/>

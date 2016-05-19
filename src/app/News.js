@@ -5,6 +5,10 @@ import FontIcon from 'material-ui/FontIcon';
 import InfoDropdown from './InfoDropdown';
 import Order from './Order';
 import Search from './Search';
+import NewsStatus from './NewsStatus';
+import Cut from './Cut';
+import DiffDialog from './DiffDialog';
+import Ee from 'event-emitter';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 
 const style = {
@@ -13,27 +17,10 @@ const style = {
     paddingRight:10,
 };
 
-const statusIcons = {
-    embargo: {
-        color: '#F57C00',
-        icon: 'timelapse'
-    },
-    active: {
-        color: '#4CAF50',
-        icon: 'fiber_manual_record'
-    },
-    inactive: {
-        color: '#9E9E9E',
-        icon: 'fiber_manual_record'
-    },
-    removed: {
-        color: '#EF5350',
-        icon: 'delete'
-    }
-};
 
 const News = React.createClass({
     makeStructure: function (raw) {
+        var self = this;
       return raw.map(function(row, index){
           for (var i in row) {
               if  (row[i] === '') row[i] = ' ';
@@ -48,9 +35,7 @@ const News = React.createClass({
                   </FontIcon>
               </TableRowColumn>
               <TableRowColumn style={style}>
-                  <FontIcon className="material-icons" style={{color:statusIcons[row.status].color}}>
-                      {statusIcons[row.status].icon}
-                  </FontIcon>
+                  <NewsStatus articleStatus={row.status}/>
               </TableRowColumn>
               <TableRowColumn style={{width:80, padding:0, textAlign:'center'}}>
                   <FontIcon className="material-icons badges" style={{display:row.photo ? 'inline-block':'none'}}>
@@ -82,17 +67,26 @@ const News = React.createClass({
                   {row.lastedit}
               </TableRowColumn>
               <TableRowColumn>
-                  {row.author}
+                  <Cut
+                      showRow={row.author}
+                      hidden={['Обновлено: '+row.date, 'Кем: '+row.lastedit]}
+                  >
+                      <span onTouchTap={self.openDiff.bind(self, row.lastedit)} style={{color:'#EF5350', cursor:'pointer'}}>Посмотреть изменения</span>
+                  </Cut>
               </TableRowColumn>
             </TableRow>;
       });
+    },
+    openDiff: function (value) {
+        Ee.methods.emit('diffRequest', value);
     },
     smallAlert: function(){
       alert('И тут мы переходим к добавлению новости');
     },
     getInitialState: function () {
         return {
-            content: this.makeStructure(TableData)
+            content: this.makeStructure(TableData),
+            openDiff: false
         };
     },
     render: function (){
@@ -141,7 +135,8 @@ const News = React.createClass({
             </TableBody>
         </Table>
                 </div>
-            </div>;
+            <DiffDialog />
+        </div>;
     }
 });
 export default News;

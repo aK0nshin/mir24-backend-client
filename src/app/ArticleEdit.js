@@ -273,13 +273,13 @@ const ArticleEdit = React.createClass({
                 </TableRow>
             </TableBody>
         </Table>
-           <div style={{margin: 'auto', height: 66, width: 913}}>
+           <div style={{margin: 'auto', height: 66, width: 1007}}>
                <div className="time">
-                    <div className="timeTitle">Дата начала публикации:</div>
+                    <div className="timeTitle"><span className="title">Дата начала публикации:</span></div>
                     <DatePicker style={{float:'left', marginRight: 73}} defaultDate={date} className="datePicker" name="date" />
                </div>
                <div className="time">
-                    <div className="timeTitle">Дата конца публикации:</div>
+                    <div className="timeTitle"><span className="title">Дата конца публикации:</span></div>
                     <DatePicker style={{float:'left'}} defaultDate={date} className="datePicker" name="date" />
                </div>
            </div>
@@ -302,15 +302,15 @@ const ArticleEdit = React.createClass({
                <TextField inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'50%'}} floatingLabelStyle={floatingLabel} floatingLabelText="Цитата интервью"/>
            </div>
            <div style={{margin:'30px 0 30px 15px'}}>
-               <span style={{fontSize:15}}>Сюжет: Пенсионер-убийца из Флориды</span>
+               <span style={{fontSize:15}}><span className="title">Сюжет:</span><span style={{marginLeft: 32}}>Пенсионер-убийца из Флориды</span></span>
                <FlatButton style={{marginLeft:20}} label="Редактировать" primary={true}/>
            </div>
            <div style={{margin:'30px 0 30px 15px'}}>
-               <span style={{fontSize:15}}>Связанные новости: В Киевской области пенсионер застрелил жену и покончил с собой</span>
+               <span style={{fontSize:15}}><span className="title">Связанные новости:</span><span style={{marginLeft: 32}}>В Киевской области пенсионер застрелил жену и покончил с собой</span></span>
                <FlatButton style={{marginLeft:20}} label="Редактировать" primary={true}/>
            </div>
            <div style={{margin:'30px 0 30px 15px'}}>
-               <span style={{fontSize:15}}>Изображение: </span>
+               <span className="title">Изображение: </span>
                <IconButton
                    iconClassName="material-icons"
                    tooltip="На основном сайте мы рекомендуем пользоваться фотобанком"
@@ -329,7 +329,7 @@ const ArticleEdit = React.createClass({
                </div>
                <div style={{marginTop:30}}>
                    <div>
-                       <div style={{fontSize:15, float: 'left', paddingTop: 15, marginLeft:15}}>Копирайт:</div>
+                       <div style={{fontSize:15, float: 'left', paddingTop: 15, marginLeft:15}}><span className="title">Копирайт:</span></div>
                        <SelectField autoWidth={true} style={{marginLeft:20, float:'left', width:400}} onChange={this.copyrightChange} value={this.state.copyright} name="copyright">
                                <MenuItem value="http://ria.ru/" primaryText="Фото: РИА Новости"/>
                                <MenuItem value="http://www.itar-tass.com/" primaryText="Фото: ИТАР-ТАСС"/>
@@ -346,7 +346,7 @@ const ArticleEdit = React.createClass({
                    </div>
                </div>
                <div style={{marginTop:30, marginLeft:15}}>
-                   <span style={{fontSize:15}}>Видео: </span>
+                   <span className="title">Видео: </span>
                    <FlatButton style={{marginLeft:20}} label="Редактировать" primary={true}/>
                </div>
 
@@ -435,7 +435,7 @@ const ArticleEdit = React.createClass({
            <CountedTextArea inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'100%'}} floatingLabelStyle={floatingLabel} floatingLabelText="Заголовок для: Выбор редакции, Автомир, Сейчас читают"/>
 
            <div style={{margin:'30px 0 30px 15px'}}>
-               <span style={{fontSize:15}}>Ролик: </span>
+               <span className="title">Ролик: </span>
                <FlatButton style={{marginLeft:20}} label="Загрузить" primary={true}/>
                <FlatButton style={{marginLeft:20}} label="Выбрать" secondary={true}/>
            </div>

@@ -83,3 +83,7 @@ td, th {
 .copyright>div {
   width: auto !important;
 }
+span.title {
+  font-size: 18px;
+  color: #00695C;
+}

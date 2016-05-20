@@ -9,6 +9,7 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
 import IconButton from 'material-ui/IconButton';
+import StatusButton from './StatusButton';
 
 const date = new Date();
 date.setFullYear(date.getFullYear() - 1);
@@ -296,6 +297,7 @@ const ArticleEdit = React.createClass({
                    info_outline
                </IconButton>
                <FlatButton style={{marginLeft:20}} label="Загрузить" primary={true}/>
+           </div>
                <div>
                    <TextField textareaStyle={{paddingRight:15}} style={{width:'50%', boxSizing:'border-box', paddingRight:15}} floatingLabelText="Title для изображения"/>
                    <TextField textareaStyle={{paddingRight:15}} style={{width:'50%', boxSizing:'border-box', paddingRight:15}} floatingLabelText="Alt для изображения"/>
@@ -303,7 +305,7 @@ const ArticleEdit = React.createClass({
                <div style={{marginTop:30}}>
                    <div>
                        <div style={{fontSize:15, float: 'left', paddingTop: 15}}>Копирайт:</div>
-                       <SelectField style={{marginLeft:20}} value={this.state.olympic} name="olympic">
+                       <SelectField style={{marginLeft:20, float:'left'}} value={this.state.olympic} name="olympic">
                            <MenuItem value="8339569" primaryText="Новости Чемпионата"/>
                            <MenuItem value="8085661" primaryText="Дневник Чемпионата"/>
                            <MenuItem value="8085696" primaryText="Мировой диван"/>
@@ -311,12 +313,149 @@ const ArticleEdit = React.createClass({
                            <MenuItem value="9361242" primaryText="Олимпийское видео"/>
                            <MenuItem value="9361243" primaryText="Как опубликуем..."/>
                        </SelectField>
+                       <TextField textareaStyle={{paddingRight:15}} style={{boxSizing:'border-box', paddingRight:15, marginTop:'-24px', width:'700px'}} floatingLabelText="Другой копирайт"/>
                    </div>
                </div>
                <div style={{marginTop:30}}>
                    <span style={{fontSize:15}}>Видео: </span>
                    <FlatButton style={{marginLeft:20}} label="Редактировать" primary={true}/>
-                </div>
+               </div>
+
+               <Table
+                   selectable={false}
+                   multiSelectable={false}
+               >
+                   <TableHeader
+                       displaySelectAll={false}
+                       adjustForCheckbox={false}
+                   >
+                       <TableRow>
+                           <TableHeaderColumn style={{textAlign:'center'}}>Страны</TableHeaderColumn>
+                       </TableRow>
+                   </TableHeader>
+                   <TableBody displayRowCheckbox={false}>
+                       <TableRow>
+                           <TableRowColumn>
+                               <Checkbox
+                                   label="Азербайджан"
+                               />
+                           </TableRowColumn>
+                           <TableRowColumn>
+                               <Checkbox
+                                   label="Армения"
+                               />
+                           </TableRowColumn>
+                           <TableRowColumn>
+                               <Checkbox
+                                   label="Беларусь"
+                               />
+                           </TableRowColumn>
+                           <TableRowColumn>
+                               <Checkbox
+                                   label="Грузия"
+                               />
+                           </TableRowColumn>
+                           <TableRowColumn>
+                               <Checkbox
+                                   label="Казахстан"
+                               />
+                           </TableRowColumn>
+                           <TableRowColumn>
+                               <Checkbox
+                                   label="Кыргызстан"
+                               />
+                           </TableRowColumn>
+                       </TableRow>
+                       <TableRow>
+                           <TableRowColumn>
+                               <Checkbox
+                                   label="Молдова"
+                               />
+                           </TableRowColumn>
+                           <TableRowColumn>
+                               <Checkbox
+                                   label="Россия"
+                               />
+                           </TableRowColumn>
+                           <TableRowColumn>
+                               <Checkbox
+                                   label="Таджикистан"
+                               />
+                           </TableRowColumn>
+                           <TableRowColumn>
+                               <Checkbox
+                                   label="Туркменистан"
+                               />
+                           </TableRowColumn>
+                           <TableRowColumn>
+                               <Checkbox
+                                   label="Узбекистан"
+                               />
+                           </TableRowColumn>
+                           <TableRowColumn>
+                               <Checkbox
+                                   label="Украина"
+                               />
+                           </TableRowColumn>
+                       </TableRow>
+                   </TableBody>
+               </Table>
+
+           <TextField style={{width:'100%', marginTop:30}} floatingLabelStyle={{fontSize:20, paddingLeft:20}} floatingLabelText="Заголовок для страницы Лучшие Новости"/>
+           <p className="count">Количество знаков: 0</p>
+           <TextField style={{width:'100%'}} floatingLabelStyle={{fontSize:20, paddingLeft:20}} floatingLabelText="Заголовок для: Выбор редакции, Автомир, Сейчас читают"/>
+           <p className="count">Количество знаков: 0</p>
+
+           <div style={{margin:'30px 0 30px 15px'}}>
+               <span style={{fontSize:15}}>Ролик: </span>
+               <FlatButton style={{marginLeft:20}} label="Загрузить" primary={true}/>
+               <FlatButton style={{marginLeft:20}} label="Выбрать" secondary={true}/>
+           </div>
+           <div className="interview">
+               <TextField textareaStyle={{paddingRight:15}} style={{width:'50%', boxSizing:'border-box', paddingRight:15}} floatingLabelText="Автор"/>
+               <TextField textareaStyle={{paddingRight:15}} style={{width:'50%', boxSizing:'border-box', paddingRight:15}} floatingLabelText="Теги"/>
+           </div>
+           <div
+               style={{marginTop:30}}
+           >
+           <Table
+               selectable={false}
+               multiSelectable={false}
+           >
+               <TableHeader
+                   displaySelectAll={false}
+                   adjustForCheckbox={false}
+                   style={{border:'none', height:0}}
+               >
+                   <TableRow displayBorder={false} style={{height:0}}>
+                       <TableHeaderColumn style={{textAlign:'center', height:0}}>Последним редактировал</TableHeaderColumn>
+                       <TableHeaderColumn style={{textAlign:'center', height:0}}>Создал</TableHeaderColumn>
+                       <TableHeaderColumn style={{textAlign:'center', height:0}}>Последним редактировал видео</TableHeaderColumn>
+                       <TableHeaderColumn style={{textAlign:'center', height:0}}>Последним редактировал изображение</TableHeaderColumn>
+                   </TableRow>
+               </TableHeader>
+               <TableBody displayRowCheckbox={false}>
+                   <TableRow displayBorder={false}>
+                       <TableRowColumn style={{textAlign:'center'}}>
+                           buziatova_tv@mirtv.ru
+                       </TableRowColumn>
+                       <TableRowColumn style={{textAlign:'center'}}>
+                           buziatova_tv@mirtv.ru
+                       </TableRowColumn>
+                       <TableRowColumn style={{textAlign:'center'}}>
+                           buziatova_tv@mirtv.ru
+                       </TableRowColumn>
+                       <TableRowColumn style={{textAlign:'center'}}>
+                           buziatova_tv@mirtv.ru
+                       </TableRowColumn>
+                   </TableRow>
+               </TableBody>
+           </Table>
+               </div>
+           <div style={{marginTop:30, marginBottom:50, textAlign:'center'}}>
+                <StatusButton />
+                <RaisedButton labelColor='#FFF' backgroundColor='#66BB6A' style={{marginRight:20}} label="Сохранить"/>
+                <RaisedButton labelColor='#FFF' backgroundColor='#EF5350' label="Удалить"/>
            </div>
        </div>
     }

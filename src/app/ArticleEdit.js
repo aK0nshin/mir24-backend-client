@@ -10,10 +10,22 @@ import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
 import IconButton from 'material-ui/IconButton';
 import StatusButton from './StatusButton';
+import CountedTextArea from './CountedTextArea';
 
 const date = new Date();
 date.setFullYear(date.getFullYear() - 1);
 date.setHours(12, 38);
+
+const floatingLabel = {
+    fontSize:20,
+    paddingLeft:20
+};
+
+const tableHeader = {
+    textAlign:'center',
+    fontSize: 18,
+    height:0
+};
 
 const ArticleEdit = React.createClass({
 
@@ -21,7 +33,8 @@ const ArticleEdit = React.createClass({
         return {
             rubric: '3720054',
             article_type: '3720054',
-            olympic: '8339569'
+            olympic: '8339569',
+            copyright:'1'
         }
     },
     rubricChange: function (event, index, value) {
@@ -39,6 +52,11 @@ const ArticleEdit = React.createClass({
             olympic:value
         });
     },
+    copyrightChange: function (event, index, value){
+        this.setState({
+            copyright:value
+        });
+    },
 
     render: function () {
        return <div>
@@ -51,11 +69,11 @@ const ArticleEdit = React.createClass({
                 adjustForCheckbox={false}
             >
                 <TableRow>
-                    <TableHeaderColumn style={{textAlign:'center'}}>Дата</TableHeaderColumn>
-                    <TableHeaderColumn style={{textAlign:'center'}}>Время</TableHeaderColumn>
-                    <TableHeaderColumn style={{textAlign:'center'}}>Рубрика</TableHeaderColumn>
-                    <TableHeaderColumn style={{textAlign:'center'}}>Тип новости</TableHeaderColumn>
-                    <TableHeaderColumn style={{textAlign:'center'}}>Олимпийская рубрика</TableHeaderColumn>
+                    <TableHeaderColumn style={tableHeader}>Дата</TableHeaderColumn>
+                    <TableHeaderColumn style={tableHeader}>Время</TableHeaderColumn>
+                    <TableHeaderColumn style={tableHeader}>Рубрика</TableHeaderColumn>
+                    <TableHeaderColumn style={tableHeader}>Тип новости</TableHeaderColumn>
+                    <TableHeaderColumn style={tableHeader}>Олимпийская рубрика</TableHeaderColumn>
                 </TableRow>
             </TableHeader>
             <TableBody displayRowCheckbox={false}>
@@ -119,7 +137,7 @@ const ArticleEdit = React.createClass({
                     </TableRowColumn>
                     <TableRowColumn>
                         <Checkbox
-                            label="На главной в центре"
+                            label="На главной в центре"  defaultChecked={true}
                         />
                     </TableRowColumn>
                     <TableRowColumn>
@@ -200,7 +218,7 @@ const ArticleEdit = React.createClass({
                     </TableRowColumn>
                     <TableRowColumn>
                         <Checkbox
-                            label="InIpad"
+                            label="InIpad" defaultChecked={true}
                         />
                     </TableRowColumn>
                     <TableRowColumn>
@@ -255,7 +273,7 @@ const ArticleEdit = React.createClass({
                 </TableRow>
             </TableBody>
         </Table>
-           <div style={{margin: 'auto', height: 66, width: 890}}>
+           <div style={{margin: 'auto', height: 66, width: 913}}>
                <div className="time">
                     <div className="timeTitle">Дата начала публикации:</div>
                     <DatePicker style={{float:'left', marginRight: 73}} defaultDate={date} className="datePicker" name="date" />
@@ -265,23 +283,30 @@ const ArticleEdit = React.createClass({
                     <DatePicker style={{float:'left'}} defaultDate={date} className="datePicker" name="date" />
                </div>
            </div>
-           <TextField style={{width:'100%'}} floatingLabelStyle={{fontSize:20, paddingLeft:20}} floatingLabelText="Заголовок"/>
-           <p className="count">Количество знаков: 0</p>
-           <TextField style={{width:'100%'}} multiLine={true} floatingLabelStyle={{fontSize:20, paddingLeft:20}} floatingLabelText="Анонс"/>
-           <p className="count">Количество знаков: 0</p>
-           <TextField style={{width:'100%'}} multiLine={true} floatingLabelStyle={{fontSize:20, paddingLeft:20}} floatingLabelText="Текст"/>
-           <p className="count">Количество знаков: 0</p>
+           <CountedTextArea style={{width:'100%'}} inputStyle={{paddingLeft:10}} value="В США пенсионер застрелил больную жену из-за нехватки денег на лекарства" floatingLabelStyle={floatingLabel} floatingLabelText="Заголовок"/>
+           <CountedTextArea style={{width:'100%'}} textareaStyle={{paddingLeft:10}} value="Кэролин более 15 лет страдала от тяжелой формы артрита и других заболеваний. В последние дни ее боли стали невыносимыми, и она не раз говорила супругу, что хочет умереть. Тем не менее Кэролин не просила Хэйгера ее убивать." multiLine={true} floatingLabelStyle={{fontSize:20, paddingLeft:20}} floatingLabelText="Анонс"/>
+           <CountedTextArea style={{width:'100%'}} textareaStyle={{paddingLeft:10}}
+                            value="В США полиция штата Флорида арестовала пожилого мужчину, который застрелил свою страдавшую от болей жену из-за нехватки средств денег на лекарства, передает _Reuters_.
+
+По данным источника, 86-летний Уильям Хэйгер застрелил 78-летнюю Кэролин глубокой ночью, когда она спала. Вместо того, чтобы сразу набрать 911 и сообщить о содеянном, мужчина сначала позвонил дочерям и рассказал о причинах, которые толкнули его на преступление.
+
+«Я хотел бы извиниться, что не позвонил раньше. Я сперва хотел рассказать, что случилось, нашим с Кэролин детям», - объяснил он полицейским.  По словам Хэйгера, он вынашивал план убийства в течение нескольких дней.
+
+Как пишет Reuters, Кэролин более 15 лет страдала от тяжелой формы артрита и других заболеваний. В последние дни ее боли стали невыносимыми, и она не раз говорила супругу, что хочет умереть. Тем не менее Кэролин не просила Хэйгера ее убивать.
+
+Мужчина пояснил, что пять лет назад пара сообщила властям о банкротстве. Супругам стало не хватать средств на лекарства после недавнего роста цен на них, а обязательная  медицинская страховка стоимость препаратов не покрывала."
+                            multiLine={true} floatingLabelStyle={floatingLabel} floatingLabelText="Текст"/>
            <div className="interview">
-               <TextField textareaStyle={{paddingRight:15}} style={{width:'25%', boxSizing:'border-box', paddingRight:15}} floatingLabelText="Фамилия интервьюируемого"/>
-               <TextField textareaStyle={{paddingRight:15}} style={{width:'25%', boxSizing:'border-box', paddingRight:15}} floatingLabelText="Имя интервьюируемого"/>
-               <TextField textareaStyle={{paddingRight:15}} style={{width:'50%', boxSizing:'border-box', paddingRight:15}} floatingLabelText="Цитата интервью"/>
+               <TextField inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'25%'}} floatingLabelStyle={floatingLabel} floatingLabelText="Фамилия интервьюируемого"/>
+               <TextField inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'25%'}} floatingLabelStyle={floatingLabel} floatingLabelText="Имя интервьюируемого"/>
+               <TextField inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'50%'}} floatingLabelStyle={floatingLabel} floatingLabelText="Цитата интервью"/>
            </div>
            <div style={{margin:'30px 0 30px 15px'}}>
-               <span style={{fontSize:15}}>Сюжет: Санкции против России</span>
+               <span style={{fontSize:15}}>Сюжет: Пенсионер-убийца из Флориды</span>
                <FlatButton style={{marginLeft:20}} label="Редактировать" primary={true}/>
            </div>
            <div style={{margin:'30px 0 30px 15px'}}>
-               <span style={{fontSize:15}}>Связанные новости: Могерини считает, что санкции против России будут продлены</span>
+               <span style={{fontSize:15}}>Связанные новости: В Киевской области пенсионер застрелил жену и покончил с собой</span>
                <FlatButton style={{marginLeft:20}} label="Редактировать" primary={true}/>
            </div>
            <div style={{margin:'30px 0 30px 15px'}}>
@@ -299,24 +324,28 @@ const ArticleEdit = React.createClass({
                <FlatButton style={{marginLeft:20}} label="Загрузить" primary={true}/>
            </div>
                <div>
-                   <TextField textareaStyle={{paddingRight:15}} style={{width:'50%', boxSizing:'border-box', paddingRight:15}} floatingLabelText="Title для изображения"/>
-                   <TextField textareaStyle={{paddingRight:15}} style={{width:'50%', boxSizing:'border-box', paddingRight:15}} floatingLabelText="Alt для изображения"/>
+                   <TextField defaultValue="В США пенсионер застрелил больную жену из-за нехватки денег на лекарства" inputStyle={{paddingLeft:10, paddingRight:15}} floatingLabelStyle={floatingLabel} style={{width:'50%'}} floatingLabelText="Title для изображения"/>
+                   <TextField defaultValue="В США пенсионер застрелил больную жену из-за нехватки денег на лекарства" inputStyle={{paddingLeft:10, paddingRight:15}} floatingLabelStyle={floatingLabel} style={{width:'50%'}} floatingLabelText="Alt для изображения"/>
                </div>
                <div style={{marginTop:30}}>
                    <div>
-                       <div style={{fontSize:15, float: 'left', paddingTop: 15}}>Копирайт:</div>
-                       <SelectField style={{marginLeft:20, float:'left'}} value={this.state.olympic} name="olympic">
-                           <MenuItem value="8339569" primaryText="Новости Чемпионата"/>
-                           <MenuItem value="8085661" primaryText="Дневник Чемпионата"/>
-                           <MenuItem value="8085696" primaryText="Мировой диван"/>
-                           <MenuItem value="9361241" primaryText="Промоблок"/>
-                           <MenuItem value="9361242" primaryText="Олимпийское видео"/>
-                           <MenuItem value="9361243" primaryText="Как опубликуем..."/>
+                       <div style={{fontSize:15, float: 'left', paddingTop: 15, marginLeft:15}}>Копирайт:</div>
+                       <SelectField autoWidth={true} style={{marginLeft:20, float:'left', width:400}} onChange={this.copyrightChange} value={this.state.copyright} name="copyright">
+                               <MenuItem value="http://ria.ru/" primaryText="Фото: РИА Новости"/>
+                               <MenuItem value="http://www.itar-tass.com/" primaryText="Фото: ИТАР-ТАСС"/>
+                               <MenuItem value="1" primaryText="Фото: МТРК «Мир»"/>
+                               <MenuItem value="2" primaryText="Фото: Татьяна Майорова (МТРК «Мир»)"/>
+                               <MenuItem value="3" primaryText="Фото: Мария Чегляева (МТРК «Мир»)"/>
+                               <MenuItem value="4" primaryText="Фото: Елена Раплева (МТРК «Мир»)"/>
+                               <MenuItem value="5" primaryText="Фото: Елена Карташова (МТРК «Мир»)"/>
+                               <MenuItem value="6" primaryText="Фото: Ксения Сарычева (МТРК «Мир»)"/>
+                               <MenuItem value="7" primaryText="Фото: Елена Крайнова (МТРК «Мир»)"/>
+                               <MenuItem value="8" primaryText="Фото: Вадим Рабкин (МТРК «Мир»)"/>
                        </SelectField>
-                       <TextField textareaStyle={{paddingRight:15}} style={{boxSizing:'border-box', paddingRight:15, marginTop:'-24px', width:'700px'}} floatingLabelText="Другой копирайт"/>
+                       <TextField  floatingLabelStyle={floatingLabel} defaultValue='Фото: "Department of Homeland Security":http://www.dhs.gov/' textareaStyle={{paddingRight:15}} style={{boxSizing:'border-box', paddingRight:15, marginTop:'-24px', width:'700px', paddingLeft:10, marginLeft:15}} floatingLabelText="Другой копирайт"/>
                    </div>
                </div>
-               <div style={{marginTop:30}}>
+               <div style={{marginTop:30, marginLeft:15}}>
                    <span style={{fontSize:15}}>Видео: </span>
                    <FlatButton style={{marginLeft:20}} label="Редактировать" primary={true}/>
                </div>
@@ -328,16 +357,17 @@ const ArticleEdit = React.createClass({
                    <TableHeader
                        displaySelectAll={false}
                        adjustForCheckbox={false}
+                       style={{border:'none'}}
                    >
-                       <TableRow>
+                       <TableRow  displayBorder={false}>
                            <TableHeaderColumn style={{textAlign:'center'}}>Страны</TableHeaderColumn>
                        </TableRow>
                    </TableHeader>
                    <TableBody displayRowCheckbox={false}>
-                       <TableRow>
+                       <TableRow  displayBorder={false}>
                            <TableRowColumn>
                                <Checkbox
-                                   label="Азербайджан"
+                                   label="Азербайджан" defaultChecked={true}
                                />
                            </TableRowColumn>
                            <TableRowColumn>
@@ -347,7 +377,7 @@ const ArticleEdit = React.createClass({
                            </TableRowColumn>
                            <TableRowColumn>
                                <Checkbox
-                                   label="Беларусь"
+                                   label="Беларусь" defaultChecked={true}
                                />
                            </TableRowColumn>
                            <TableRowColumn>
@@ -357,7 +387,7 @@ const ArticleEdit = React.createClass({
                            </TableRowColumn>
                            <TableRowColumn>
                                <Checkbox
-                                   label="Казахстан"
+                                   label="Казахстан" defaultChecked={true}
                                />
                            </TableRowColumn>
                            <TableRowColumn>
@@ -374,12 +404,12 @@ const ArticleEdit = React.createClass({
                            </TableRowColumn>
                            <TableRowColumn>
                                <Checkbox
-                                   label="Россия"
+                                   label="Россия" defaultChecked={true}
                                />
                            </TableRowColumn>
                            <TableRowColumn>
                                <Checkbox
-                                   label="Таджикистан"
+                                   label="Таджикистан" defaultChecked={true}
                                />
                            </TableRowColumn>
                            <TableRowColumn>
@@ -401,19 +431,17 @@ const ArticleEdit = React.createClass({
                    </TableBody>
                </Table>
 
-           <TextField style={{width:'100%', marginTop:30}} floatingLabelStyle={{fontSize:20, paddingLeft:20}} floatingLabelText="Заголовок для страницы Лучшие Новости"/>
-           <p className="count">Количество знаков: 0</p>
-           <TextField style={{width:'100%'}} floatingLabelStyle={{fontSize:20, paddingLeft:20}} floatingLabelText="Заголовок для: Выбор редакции, Автомир, Сейчас читают"/>
-           <p className="count">Количество знаков: 0</p>
+           <CountedTextArea inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'100%', marginTop:30}} floatingLabelStyle={floatingLabel} floatingLabelText="Заголовок для страницы Лучшие Новости"/>
+           <CountedTextArea inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'100%'}} floatingLabelStyle={floatingLabel} floatingLabelText="Заголовок для: Выбор редакции, Автомир, Сейчас читают"/>
 
            <div style={{margin:'30px 0 30px 15px'}}>
                <span style={{fontSize:15}}>Ролик: </span>
                <FlatButton style={{marginLeft:20}} label="Загрузить" primary={true}/>
                <FlatButton style={{marginLeft:20}} label="Выбрать" secondary={true}/>
            </div>
-           <div className="interview">
-               <TextField textareaStyle={{paddingRight:15}} style={{width:'50%', boxSizing:'border-box', paddingRight:15}} floatingLabelText="Автор"/>
-               <TextField textareaStyle={{paddingRight:15}} style={{width:'50%', boxSizing:'border-box', paddingRight:15}} floatingLabelText="Теги"/>
+           <div>
+               <TextField floatingLabelStyle={floatingLabel} inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'50%', boxSizing:'border-box', paddingRight:15}} floatingLabelText="Автор"/>
+               <TextField floatingLabelStyle={floatingLabel} inputStyle={{paddingLeft:10, paddingRight:15}} defaultValue="лекарства, застрелил, супруга, пенсионер, сша" style={{width:'50%'}} floatingLabelText="Теги"/>
            </div>
            <div
                style={{marginTop:30}}
@@ -428,25 +456,25 @@ const ArticleEdit = React.createClass({
                    style={{border:'none', height:0}}
                >
                    <TableRow displayBorder={false} style={{height:0}}>
-                       <TableHeaderColumn style={{textAlign:'center', height:0}}>Последним редактировал</TableHeaderColumn>
-                       <TableHeaderColumn style={{textAlign:'center', height:0}}>Создал</TableHeaderColumn>
-                       <TableHeaderColumn style={{textAlign:'center', height:0}}>Последним редактировал видео</TableHeaderColumn>
-                       <TableHeaderColumn style={{textAlign:'center', height:0}}>Последним редактировал изображение</TableHeaderColumn>
+                       <TableHeaderColumn style={tableHeader}>Последним редактировал</TableHeaderColumn>
+                       <TableHeaderColumn style={tableHeader}>Создал</TableHeaderColumn>
+                       <TableHeaderColumn style={tableHeader}>Последним редактировал видео</TableHeaderColumn>
+                       <TableHeaderColumn style={tableHeader}>Последним редактировал изображение</TableHeaderColumn>
                    </TableRow>
                </TableHeader>
                <TableBody displayRowCheckbox={false}>
                    <TableRow displayBorder={false}>
-                       <TableRowColumn style={{textAlign:'center'}}>
+                       <TableRowColumn style={{textAlign:'center', fontSize:16}}>
                            buziatova_tv@mirtv.ru
                        </TableRowColumn>
-                       <TableRowColumn style={{textAlign:'center'}}>
-                           buziatova_tv@mirtv.ru
+                       <TableRowColumn style={{textAlign:'center', fontSize:16}}>
+                           rakovich_iv@mirtv.ru
                        </TableRowColumn>
-                       <TableRowColumn style={{textAlign:'center'}}>
-                           buziatova_tv@mirtv.ru
+                       <TableRowColumn style={{textAlign:'center', fontSize:16}}>
+                           Не определен
                        </TableRowColumn>
-                       <TableRowColumn style={{textAlign:'center'}}>
-                           buziatova_tv@mirtv.ru
+                       <TableRowColumn style={{textAlign:'center', fontSize:16}}>
+                           Не определен
                        </TableRowColumn>
                    </TableRow>
                </TableBody>

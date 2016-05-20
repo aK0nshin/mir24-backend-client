@@ -74,7 +74,12 @@ td, th {
 .timeTitle {
   float:left;
   padding-top: 14px;
+  font-size:14px;
 }
 .count {
   text-align: center;
+  color:#607D8B;
+}
+.copyright>div {
+  width: auto !important;
 }

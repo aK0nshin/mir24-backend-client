@@ -10,7 +10,7 @@ const StatusButton = React.createClass({
         },
         {
           title: 'Видно админу',
-          color: "#CDDC39"
+          color: "#FBC02D"
         },
         {
             title: 'Скрыто',

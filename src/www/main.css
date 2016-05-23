@@ -98,7 +98,7 @@ span.title {
   margin-bottom:30px;
   clear: both;
 }
-.dropboxes>div {
+.date-time>div, .news-meta>div {
   float:left;
   width:20%;
 }

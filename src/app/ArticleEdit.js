@@ -62,80 +62,84 @@ const ArticleEdit = React.createClass({
        return <div>
 
            <div className="dropboxes">
-               <div>
-                    <div className="box-title">
-                        Дата
-                    </div>
-                    <div className="dropbox">
-                        <DatePicker defaultDate={date} cancelLabel="Отмена" className="datePicker" name="date" />
-                    </div>
+               <div className="date-time">
+                   <div>
+                        <div className="box-title">
+                            Дата
+                        </div>
+                        <div className="dropbox">
+                            <DatePicker defaultDate={date} cancelLabel="Отмена" className="datePicker" name="date" />
+                        </div>
+                   </div>
+                   <div>
+                        <div className="box-title">
+                            Время
+                        </div>
+                        <div className="dropbox">
+                            <TimePicker defaultTime={date} cancelLabel="Отмена" format="24hr" className="datePicker"  name="time" />
+                        </div>
+                   </div>
                </div>
-               <div>
-                    <div className="box-title">
-                        Время
-                    </div>
-                    <div className="dropbox">
-                        <TimePicker defaultTime={date} cancelLabel="Отмена" format="24hr" className="datePicker"  name="time" />
-                    </div>
-               </div>
-               <div>
-                    <div className="box-title">
-                        Рубрика
-                    </div>
-                    <div className="dropbox">
-                        <SelectField className="drop" style={{paddingRight:0}} value={this.state.rubric} name="rubric" onChange={this.rubricChange}>
-                            <MenuItem value="3720054" primaryText="Сеть вещания"/>
-                            <MenuItem value="4403266" primaryText="Видео"/>
-                            <MenuItem value="5565836" primaryText="МИРУ 20 ЛЕТ"/>
-                            <MenuItem value="6979922" primaryText="Жди меня"/>
-                            <MenuItem value="91" primaryText="В мире"/>
-                            <MenuItem value="427" primaryText="Экономика"/>
-                            <MenuItem value="422" primaryText="Культура"/>
-                            <MenuItem value="433" primaryText="Спорт"/>
-                            <MenuItem value="445" primaryText="Hi-tech"/>
-                            <MenuItem value="3708534" primaryText="Наука"/>
-                            <MenuItem value="93" primaryText="Авто"/>
-                            <MenuItem value="4993191" primaryText="Вакансии"/>
-                            <MenuItem value="10627006" primaryText="Шоу-бизнес"/>
-                            <MenuItem value="9332290" primaryText="Чемпионат"/>
-                            <MenuItem value="95" primaryText="Общество"/>
-                            <MenuItem value="9323848" primaryText="Пресс-релизы"/>
-                            <MenuItem value="246" primaryText="Политика"/>
-                            <MenuItem value="424" primaryText="Происшествия"/>
-                            <MenuItem value="9707131" primaryText="Интерактив"/>
-                            <MenuItem value="435" primaryText="В Содружестве"/>
-                            <MenuItem value="9186356" primaryText="Кухни мира"/>
-                            <MenuItem value="7203542" primaryText="Путеводитель"/>
-                            <MenuItem value="484" primaryText="Стиль жизни"/>
-                        </SelectField>
-                    </div>
-               </div>
-               <div>
-                    <div className="box-title">
-                        Тип новости
-                    </div>
-                    <div className="dropbox">
-                        <SelectField className="drop" style={{paddingRight:0}} value={this.state.article_type} name="article_type" onChange={this.articleTypeChange}>
-                            <MenuItem value="3720054" primaryText="Новость"/>
-                            <MenuItem value="4403266" primaryText="Интервью"/>
-                            <MenuItem value="5565836" primaryText="Статья"/>
-                        </SelectField>
-                    </div>
-               </div>
-               <div>
-                    <div className="box-title">
-                        Олимпийская рубрика
-                    </div>
-                    <div className="dropbox">
-                        <SelectField className="drop" value={this.state.olympic} name="olympic" onChange={this.olympicChange}>
-                            <MenuItem value="8339569" primaryText="Новости Чемпионата"/>
-                            <MenuItem value="8085661" primaryText="Дневник Чемпионата"/>
-                            <MenuItem value="8085696" primaryText="Мировой диван"/>
-                            <MenuItem value="9361241" primaryText="Промоблок"/>
-                            <MenuItem value="9361242" primaryText="Олимпийское видео"/>
-                            <MenuItem value="9361243" primaryText="Как опубликуем..."/>
-                        </SelectField>
-                    </div>
+               <div className="news-meta">
+                   <div>
+                        <div className="box-title">
+                            Рубрика
+                        </div>
+                        <div className="dropbox">
+                            <SelectField className="drop" style={{paddingRight:0}} value={this.state.rubric} name="rubric" onChange={this.rubricChange}>
+                                <MenuItem value="3720054" primaryText="Сеть вещания"/>
+                                <MenuItem value="4403266" primaryText="Видео"/>
+                                <MenuItem value="5565836" primaryText="МИРУ 20 ЛЕТ"/>
+                                <MenuItem value="6979922" primaryText="Жди меня"/>
+                                <MenuItem value="91" primaryText="В мире"/>
+                                <MenuItem value="427" primaryText="Экономика"/>
+                                <MenuItem value="422" primaryText="Культура"/>
+                                <MenuItem value="433" primaryText="Спорт"/>
+                                <MenuItem value="445" primaryText="Hi-tech"/>
+                                <MenuItem value="3708534" primaryText="Наука"/>
+                                <MenuItem value="93" primaryText="Авто"/>
+                                <MenuItem value="4993191" primaryText="Вакансии"/>
+                                <MenuItem value="10627006" primaryText="Шоу-бизнес"/>
+                                <MenuItem value="9332290" primaryText="Чемпионат"/>
+                                <MenuItem value="95" primaryText="Общество"/>
+                                <MenuItem value="9323848" primaryText="Пресс-релизы"/>
+                                <MenuItem value="246" primaryText="Политика"/>
+                                <MenuItem value="424" primaryText="Происшествия"/>
+                                <MenuItem value="9707131" primaryText="Интерактив"/>
+                                <MenuItem value="435" primaryText="В Содружестве"/>
+                                <MenuItem value="9186356" primaryText="Кухни мира"/>
+                                <MenuItem value="7203542" primaryText="Путеводитель"/>
+                                <MenuItem value="484" primaryText="Стиль жизни"/>
+                            </SelectField>
+                        </div>
+                   </div>
+                   <div>
+                        <div className="box-title">
+                            Тип новости
+                        </div>
+                        <div className="dropbox">
+                            <SelectField className="drop" style={{paddingRight:0}} value={this.state.article_type} name="article_type" onChange={this.articleTypeChange}>
+                                <MenuItem value="3720054" primaryText="Новость"/>
+                                <MenuItem value="4403266" primaryText="Интервью"/>
+                                <MenuItem value="5565836" primaryText="Статья"/>
+                            </SelectField>
+                        </div>
+                   </div>
+                   <div>
+                        <div className="box-title">
+                            Олимпийская рубрика
+                        </div>
+                        <div className="dropbox">
+                            <SelectField className="drop" value={this.state.olympic} name="olympic" onChange={this.olympicChange}>
+                                <MenuItem value="8339569" primaryText="Новости Чемпионата"/>
+                                <MenuItem value="8085661" primaryText="Дневник Чемпионата"/>
+                                <MenuItem value="8085696" primaryText="Мировой диван"/>
+                                <MenuItem value="9361241" primaryText="Промоблок"/>
+                                <MenuItem value="9361242" primaryText="Олимпийское видео"/>
+                                <MenuItem value="9361243" primaryText="Как опубликуем..."/>
+                            </SelectField>
+                        </div>
+                   </div>
                </div>
            </div>
                 <div className="masonryTable">

@@ -8,6 +8,9 @@ const Cut = React.createClass({
     componentDidMount: function () {
         Ee.methods.on('diffOpened', this.handleClose);
     },
+    componentWillUnmount: function () {
+        Ee.methods.off('diffOpened', this.handleClose);
+    },
     
     getInitialState: function () {
         return {

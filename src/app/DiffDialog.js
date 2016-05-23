@@ -10,6 +10,9 @@ const DiffDialog = React.createClass({
     componentDidMount: function () {
         Ee.methods.on('diffRequest', this.handleOpen);
     },
+    componentWillUnmount: function () {
+        Ee.methods.off('diffRequest', this.handleOpen);
+    },
 
     getInitialState: function (){
         return {

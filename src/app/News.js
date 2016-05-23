@@ -30,10 +30,8 @@ const News = React.createClass({
               <TableRowColumn style={style}>
                   <InfoDropdown id={row.id}/>
               </TableRowColumn>
-              <TableRowColumn style={style}>
-                  <Link to="/article/edit/"><FontIcon className="material-icons" style={{color:'#FFC107', cursor:'pointer'}}>
-                      edit
-                  </FontIcon></Link>
+              <TableRowColumn style={{width:70}}>
+                  {row.date.substr(0, 10)}
               </TableRowColumn>
               <TableRowColumn style={style}>
                   <NewsStatus articleStatus={row.status}/>
@@ -49,28 +47,23 @@ const News = React.createClass({
                       collections
                   </FontIcon>
               </TableRowColumn>
-              <TableRowColumn>
-                  {row.date}
+              <TableRowColumn style={{width:70}}>
+                  {row.date.substr(11)}
               </TableRowColumn>
               <TableRowColumn style={{width:'25%'}}>
-                  {row.title}
+                  <Link to="/article/edit/">{row.title}</Link>
               </TableRowColumn>
               <TableRowColumn>
                   {row.rubric}
               </TableRowColumn>
               <TableRowColumn>
-                  {row.videoAdd}
-              </TableRowColumn>
-              <TableRowColumn>
-                  {row.photoAdd}
-              </TableRowColumn>
-              <TableRowColumn>
-                  {row.lastedit}
-              </TableRowColumn>
-              <TableRowColumn>
                   <Cut
                       showRow={row.author}
-                      hidden={['Обновлено: '+row.date, 'Кем: '+row.lastedit]}
+                      hidden={['Обновлено: '+row.date,
+                       'Кем: '+row.lastedit,
+                       'Последним редактировал: '+row.lastedit,
+                       'Залил фото: '+row.photoAdd,
+                       'Залил видео: '+row.videoAdd]}
                   >
                       <span onTouchTap={self.openDiff.bind(self, row.lastedit)} style={{color:'#EF5350', cursor:'pointer'}}>Посмотреть изменения</span>
                   </Cut>
@@ -105,7 +98,7 @@ const News = React.createClass({
                 <FontIcon className="material-icons" style={{color:'#B0BEC5'}}>add</FontIcon>
             </FloatingActionButton>
             <Search />
-            <div style={{minWidth:1500}}>
+            <div>
 
             <Table
         selectable={false}
@@ -117,15 +110,12 @@ const News = React.createClass({
             >
                 <TableRow>
                     <TableHeaderColumn style={{width:23, padding:0}}> </TableHeaderColumn>
-                    <TableHeaderColumn style={{width:23, padding:0}}> </TableHeaderColumn>
+                    <TableHeaderColumn style={{width:70}}>Дата <Order row='Тут передадим поле для ордера'/></TableHeaderColumn>
                     <TableHeaderColumn style={{width:23, padding:0}}> </TableHeaderColumn>
                     <TableHeaderColumn style={{width:80, padding:0}}> </TableHeaderColumn>
-                    <TableHeaderColumn>Дата <Order row='Тут передадим поле для ордера'/></TableHeaderColumn>
+                    <TableHeaderColumn style={{width:70}}>Время <Order row='Тут передадим поле для ордера'/></TableHeaderColumn>
                     <TableHeaderColumn tooltip="Заголовок новости" style={{width:'25%'}}>Заголовок</TableHeaderColumn>
                     <TableHeaderColumn tooltip="Супертег новости">Супертег <Order row='Тут передадим поле для ордера'/></TableHeaderColumn>
-                    <TableHeaderColumn tooltip="Кто залил фото">Залил фото <Order row='Тут передадим поле для ордера'/></TableHeaderColumn>
-                    <TableHeaderColumn tooltip="Кто залил видео">Залил видео <Order row='Тут передадим поле для ордера'/></TableHeaderColumn>
-                    <TableHeaderColumn tooltip="Последний редактор">Посл. редактировал <Order row='Тут передадим поле для ордера'/></TableHeaderColumn>
                     <TableHeaderColumn tooltip="Создал новость">Создал</TableHeaderColumn>
                 </TableRow>
             </TableHeader>

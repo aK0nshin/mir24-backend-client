@@ -42,16 +42,6 @@ const ArticleEdit = React.createClass({
             rubric:value
         });
     },
-    articleTypeChange: function (event, index, value) {
-        this.setState({
-            article_type:value
-        });
-    },
-    olympicChange: function (event, index, value){
-        this.setState({
-            olympic:value
-        });
-    },
     copyrightChange: function (event, index, value){
         this.setState({
             copyright:value
@@ -62,167 +52,78 @@ const ArticleEdit = React.createClass({
        return <div>
 
            <div className="dropboxes">
-               <div className="date-time">
-                   <div>
-                        <div className="box-title">
-                            Дата
-                        </div>
-                        <div className="dropbox">
-                            <DatePicker defaultDate={date} cancelLabel="Отмена" className="datePicker" name="date" />
-                        </div>
-                   </div>
-                   <div>
-                        <div className="box-title">
-                            Время
-                        </div>
-                        <div className="dropbox">
-                            <TimePicker defaultTime={date} cancelLabel="Отмена" format="24hr" className="datePicker"  name="time" />
-                        </div>
-                   </div>
+               <div>
+                    <div className="box-title">
+                        Дата
+                    </div>
+                    <div className="dropbox">
+                        <DatePicker defaultDate={date} cancelLabel="Отмена" className="datePicker" name="date" />
+                    </div>
                </div>
-               <div className="news-meta">
-                   <div>
-                        <div className="box-title">
-                            Рубрика
-                        </div>
-                        <div className="dropbox">
-                            <SelectField className="drop" style={{paddingRight:0}} value={this.state.rubric} name="rubric" onChange={this.rubricChange}>
-                                <MenuItem value="3720054" primaryText="Сеть вещания"/>
-                                <MenuItem value="4403266" primaryText="Видео"/>
-                                <MenuItem value="5565836" primaryText="МИРУ 20 ЛЕТ"/>
-                                <MenuItem value="6979922" primaryText="Жди меня"/>
-                                <MenuItem value="91" primaryText="В мире"/>
-                                <MenuItem value="427" primaryText="Экономика"/>
-                                <MenuItem value="422" primaryText="Культура"/>
-                                <MenuItem value="433" primaryText="Спорт"/>
-                                <MenuItem value="445" primaryText="Hi-tech"/>
-                                <MenuItem value="3708534" primaryText="Наука"/>
-                                <MenuItem value="93" primaryText="Авто"/>
-                                <MenuItem value="4993191" primaryText="Вакансии"/>
-                                <MenuItem value="10627006" primaryText="Шоу-бизнес"/>
-                                <MenuItem value="9332290" primaryText="Чемпионат"/>
-                                <MenuItem value="95" primaryText="Общество"/>
-                                <MenuItem value="9323848" primaryText="Пресс-релизы"/>
-                                <MenuItem value="246" primaryText="Политика"/>
-                                <MenuItem value="424" primaryText="Происшествия"/>
-                                <MenuItem value="9707131" primaryText="Интерактив"/>
-                                <MenuItem value="435" primaryText="В Содружестве"/>
-                                <MenuItem value="9186356" primaryText="Кухни мира"/>
-                                <MenuItem value="7203542" primaryText="Путеводитель"/>
-                                <MenuItem value="484" primaryText="Стиль жизни"/>
-                            </SelectField>
-                        </div>
-                   </div>
-                   <div>
-                        <div className="box-title">
-                            Тип новости
-                        </div>
-                        <div className="dropbox">
-                            <SelectField className="drop" style={{paddingRight:0}} value={this.state.article_type} name="article_type" onChange={this.articleTypeChange}>
-                                <MenuItem value="3720054" primaryText="Новость"/>
-                                <MenuItem value="4403266" primaryText="Интервью"/>
-                                <MenuItem value="5565836" primaryText="Статья"/>
-                            </SelectField>
-                        </div>
-                   </div>
-                   <div>
-                        <div className="box-title">
-                            Олимпийская рубрика
-                        </div>
-                        <div className="dropbox">
-                            <SelectField className="drop" value={this.state.olympic} name="olympic" onChange={this.olympicChange}>
-                                <MenuItem value="8339569" primaryText="Новости Чемпионата"/>
-                                <MenuItem value="8085661" primaryText="Дневник Чемпионата"/>
-                                <MenuItem value="8085696" primaryText="Мировой диван"/>
-                                <MenuItem value="9361241" primaryText="Промоблок"/>
-                                <MenuItem value="9361242" primaryText="Олимпийское видео"/>
-                                <MenuItem value="9361243" primaryText="Как опубликуем..."/>
-                            </SelectField>
-                        </div>
-                   </div>
+               <div>
+                    <div className="box-title">
+                        Время
+                    </div>
+                    <div className="dropbox">
+                        <TimePicker defaultTime={date} cancelLabel="Отмена" format="24hr" className="datePicker"  name="time" />
+                    </div>
+               </div>
+               <div>
+                    <div className="box-title">
+                        Рубрика
+                    </div>
+                    <div className="dropbox">
+                        <SelectField className="drop" style={{paddingRight:0}} value={this.state.rubric} name="rubric" onChange={this.rubricChange}>
+                            <MenuItem value="3720054" primaryText="Сеть вещания"/>
+                            <MenuItem value="4403266" primaryText="Видео"/>
+                            <MenuItem value="5565836" primaryText="МИРУ 20 ЛЕТ"/>
+                            <MenuItem value="6979922" primaryText="Жди меня"/>
+                            <MenuItem value="91" primaryText="В мире"/>
+                            <MenuItem value="427" primaryText="Экономика"/>
+                            <MenuItem value="422" primaryText="Культура"/>
+                            <MenuItem value="433" primaryText="Спорт"/>
+                            <MenuItem value="445" primaryText="Hi-tech"/>
+                            <MenuItem value="3708534" primaryText="Наука"/>
+                            <MenuItem value="93" primaryText="Авто"/>
+                            <MenuItem value="4993191" primaryText="Вакансии"/>
+                            <MenuItem value="10627006" primaryText="Шоу-бизнес"/>
+                            <MenuItem value="9332290" primaryText="Чемпионат"/>
+                            <MenuItem value="95" primaryText="Общество"/>
+                            <MenuItem value="9323848" primaryText="Пресс-релизы"/>
+                            <MenuItem value="246" primaryText="Политика"/>
+                            <MenuItem value="424" primaryText="Происшествия"/>
+                            <MenuItem value="9707131" primaryText="Интерактив"/>
+                            <MenuItem value="435" primaryText="В Содружестве"/>
+                            <MenuItem value="9186356" primaryText="Кухни мира"/>
+                            <MenuItem value="7203542" primaryText="Путеводитель"/>
+                            <MenuItem value="484" primaryText="Стиль жизни"/>
+                        </SelectField>
+                    </div>
                </div>
            </div>
-                <div className="masonryTable">
-                        <Checkbox
-                            label="На олимпийской главной странице"
-                        />
+                <div className="checkboxes">
+                    <div>
                         <Checkbox
                             label="На главной в центре"  defaultChecked={true}
                         />
+                    </div>
+                    <div>
                         <Checkbox
                             label="Новость часа"
                         />
-                        <Checkbox
+                    </div>
+                    <div>
+                    <Checkbox
                             label="На главной странице вверху"
                         />
-                        <Checkbox
-                            label="На олимпийской главной странице вверху"
-                        />
-                        <Checkbox
-                            label="Горячая новость"
-                        />
-                        <Checkbox
-                            label="Фотоленты"
-                        />
-                        <Checkbox
-                            label="Видеобаннер"
-                        />
-                        <Checkbox
-                            label="Выводить в Рамблер RSS"
-                        />
-                        <Checkbox
-                            label="Раздел Лучшее"
-                        />
-                        <Checkbox
-                            label="Выбор редакции"
-                        />
-                        <Checkbox
-                            label="АвтоМир"
-                        />
-                        <Checkbox
-                            label="Кухни мира"
-                        />
-                        <Checkbox
-                            label="Красота и здоровье"
-                        />
-                        <Checkbox
-                            label="Сейчас читают"
-                        />
-                        <Checkbox
-                            label="Интервью на главной"
-                        />
-                        <Checkbox
-                            label="InIpad" defaultChecked={true}
-                        />
-                        <Checkbox
-                            label="Заголовок"
-                        />
-                        <Checkbox
-                            label="Новости компании"
-                        />
-                        <Checkbox
-                            label="Блок телеканал мир 24"
-                        />
-                        <Checkbox
-                            label="Рекомендованный"
-                        />
-                        <Checkbox
-                            label="С правой стороны"
-                        />
-                        <Checkbox
-                            label="Наверху в рубрике"
-                        />
-                        <Checkbox
-                            label="Выводить в Mail.Ru RSS"
-                        />
+                    </div>
+                    <div>
                         <Checkbox
                             label="Снять с публикации через 36ч."
                         />
-                        <Checkbox
-                            label="Эксклюзив"
-                        />
+                    </div>
                 </div>
-           <div style={{margin: 'auto', height: 66, width: 777}}>
+           <div className='timeContainer'style={{margin: 'auto', height: 66, width: 777}}>
                <div className="time">
                     <div className="timeTitle"><span className="title">Дата начала публикации:</span></div>
                     <DatePicker style={{float:'left', marginRight: 73}} cancelLabel="Отмена" textFieldStyle={{width:140}} defaultDate={date} className="datePicker small" name="date" />
@@ -397,42 +298,39 @@ const ArticleEdit = React.createClass({
                <TextField floatingLabelStyle={floatingLabel} className="textfield" inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'50%', boxSizing:'border-box', paddingRight:15}} floatingLabelText="Автор"/>
                <TextField floatingLabelStyle={floatingLabel} className="textfield" inputStyle={{paddingLeft:10, paddingRight:15}} defaultValue="лекарства, застрелил, супруга, пенсионер, сша" style={{width:'50%'}} floatingLabelText="Теги"/>
            </div>
-           <div
-               style={{marginTop:30}}
-           >
-           <Table
-               selectable={false}
-               multiSelectable={false}
-           >
-               <TableHeader
-                   displaySelectAll={false}
-                   adjustForCheckbox={false}
-                   style={{border:'none', height:0}}
-               >
-                   <TableRow displayBorder={false} style={{height:0}}>
-                       <TableHeaderColumn style={tableHeader}>Последним редактировал</TableHeaderColumn>
-                       <TableHeaderColumn style={tableHeader}>Создал</TableHeaderColumn>
-                       <TableHeaderColumn style={tableHeader}>Редактировал видео</TableHeaderColumn>
-                       <TableHeaderColumn style={tableHeader}>Редактировал изображение</TableHeaderColumn>
-                   </TableRow>
-               </TableHeader>
-               <TableBody displayRowCheckbox={false}>
-                   <TableRow displayBorder={false}>
-                       <TableRowColumn style={{textAlign:'center', fontSize:16}}>
+               <div className="redaction">
+                   <div>
+                       <div className="redaction-title">
+                           Последним редактировал
+                       </div>
+                       <div className="redaction-desc">
                            buziatova_tv@mirtv.ru
-                       </TableRowColumn>
-                       <TableRowColumn style={{textAlign:'center', fontSize:16}}>
+                       </div>
+                   </div>
+                   <div>
+                       <div className="redaction-title">
+                           Создал
+                       </div>
+                       <div className="redaction-desc">
                            rakovich_iv@mirtv.ru
-                       </TableRowColumn>
-                       <TableRowColumn style={{textAlign:'center', fontSize:16}}>
+                       </div>
+                   </div>
+                   <div>
+                       <div className="redaction-title">
+                           Редактировал видео
+                       </div>
+                       <div className="redaction-desc">
                            Не определен
-                       </TableRowColumn>
-                       <TableRowColumn style={{textAlign:'center', fontSize:16}}>
+                       </div>
+                   </div>
+                   <div>
+                       <div className="redaction-title">
+                           Редактировал изображение
+                       </div>
+                       <div className="redaction-desc">
                            Не определен
-                       </TableRowColumn>
-                   </TableRow>
-               </TableBody>
-           </Table>
+                       </div>
+                   </div>
                </div>
            <div style={{marginTop:30, marginBottom:50, textAlign:'center'}}>
                 <StatusButton />

@@ -67,6 +67,11 @@ td, th {
 .datePicker>input {
   text-align:center;
   cursor: pointer;
+  width:140px;
+
+}
+.datepicker.small {
+  width:140px;
 }
 .drop>div div{
   padding-right:0 !important;

@@ -79,10 +79,10 @@ const ArticleEdit = React.createClass({
             <TableBody displayRowCheckbox={false}>
                 <TableRow style={{background:'#ECEFF1'}}>
                     <TableRowColumn style={{textAlign:'center'}}>
-                        <DatePicker defaultDate={date} className="datePicker" name="date" />
+                        <DatePicker defaultDate={date} cancelLabel="Отмена" className="datePicker" name="date" />
                     </TableRowColumn>
                     <TableRowColumn style={{textAlign:'center'}}>
-                        <TimePicker defaultTime={date} format="24hr" className="datePicker"  name="time" />
+                        <TimePicker defaultTime={date} cancelLabel="Отмена" format="24hr" className="datePicker"  name="time" />
                     </TableRowColumn>
                     <TableRowColumn style={{textAlign:'center'}}>
                         <SelectField className="drop" style={{paddingRight:0}} value={this.state.rubric} name="rubric" onChange={this.rubricChange}>
@@ -273,14 +273,14 @@ const ArticleEdit = React.createClass({
                 </TableRow>
             </TableBody>
         </Table>
-           <div style={{margin: 'auto', height: 66, width: 1007}}>
+           <div style={{margin: 'auto', height: 66, width: 777}}>
                <div className="time">
                     <div className="timeTitle"><span className="title">Дата начала публикации:</span></div>
-                    <DatePicker style={{float:'left', marginRight: 73}} defaultDate={date} className="datePicker" name="date" />
+                    <DatePicker style={{float:'left', marginRight: 73}} cancelLabel="Отмена" textFieldStyle={{width:140}} defaultDate={date} className="datePicker small" name="date" />
                </div>
                <div className="time">
                     <div className="timeTitle"><span className="title">Дата конца публикации:</span></div>
-                    <DatePicker style={{float:'left'}} defaultDate={date} className="datePicker" name="date" />
+                    <DatePicker style={{float:'left'}} cancelLabel="Отмена" textFieldStyle={{width:140}} defaultDate={date} className="datePicker small" name="date" />
                </div>
            </div>
            <CountedTextArea style={{width:'100%'}} inputStyle={{paddingLeft:10}} value="В США пенсионер застрелил больную жену из-за нехватки денег на лекарства" floatingLabelStyle={floatingLabel} floatingLabelText="Заголовок"/>
@@ -458,8 +458,8 @@ const ArticleEdit = React.createClass({
                    <TableRow displayBorder={false} style={{height:0}}>
                        <TableHeaderColumn style={tableHeader}>Последним редактировал</TableHeaderColumn>
                        <TableHeaderColumn style={tableHeader}>Создал</TableHeaderColumn>
-                       <TableHeaderColumn style={tableHeader}>Последним редактировал видео</TableHeaderColumn>
-                       <TableHeaderColumn style={tableHeader}>Последним редактировал изображение</TableHeaderColumn>
+                       <TableHeaderColumn style={tableHeader}>Редактировал видео</TableHeaderColumn>
+                       <TableHeaderColumn style={tableHeader}>Редактировал изображение</TableHeaderColumn>
                    </TableRow>
                </TableHeader>
                <TableBody displayRowCheckbox={false}>

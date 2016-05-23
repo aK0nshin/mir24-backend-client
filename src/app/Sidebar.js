@@ -59,6 +59,7 @@ var Sidebar = React.createClass({
                 open={this.state.open}
                 onRequestChange={this.handleClose}
                 width={250}
+                disableSwipeToOpen={true}
             >
                 <AppBar
                     showMenuIconButton={false}

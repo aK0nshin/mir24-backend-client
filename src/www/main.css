@@ -92,7 +92,29 @@ span.title {
   font-size: 18px;
   color: #0097a7;
 }
-
+.masonryTable {
+  box-sizing: border-box;
+  padding:10px;
+  margin-bottom:30px;
+  clear: both;
+}
+.date-time>div, .news-meta>div {
+  float:left;
+  width:20%;
+}
+.dropbox, .box-title {
+  text-align: center;
+}
+.masonryTable>div {
+  cursor:pointer;
+  position: relative;
+  display: inline-block !important;
+  background: #fff;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
 @media only screen and (max-width: 1260px) {
   .textfield {
     display: block !important;
@@ -106,5 +128,31 @@ span.title {
   .textfield.copy>input{
     padding-left:10px !important;
     padding-right:15px !important;
+  }
+}
+@media only screen and (max-width: 8192px) {
+  .masonryTable {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+@media only screen and (max-width: 1017px) {
+  .masonryTable {
+    /*height:362px;*/
+  }
+}
+@media only screen and (max-width: 850px) {
+  .masonryTable {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .masonryTable {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
   }
 }

@@ -296,10 +296,10 @@ const ArticleEdit = React.createClass({
 
 Мужчина пояснил, что пять лет назад пара сообщила властям о банкротстве. Супругам стало не хватать средств на лекарства после недавнего роста цен на них, а обязательная  медицинская страховка стоимость препаратов не покрывала."
                             multiLine={true} floatingLabelStyle={floatingLabel} floatingLabelText="Текст"/>
-           <div className="interview">
-               <TextField inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'25%'}} floatingLabelStyle={floatingLabel} floatingLabelText="Фамилия интервьюируемого"/>
-               <TextField inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'25%'}} floatingLabelStyle={floatingLabel} floatingLabelText="Имя интервьюируемого"/>
-               <TextField inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'50%'}} floatingLabelStyle={floatingLabel} floatingLabelText="Цитата интервью"/>
+           <div>
+               <TextField inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'25%'}} className="textfield" floatingLabelStyle={floatingLabel} floatingLabelText="Фамилия интервьюируемого"/>
+               <TextField inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'25%'}} className="textfield" floatingLabelStyle={floatingLabel} floatingLabelText="Имя интервьюируемого"/>
+               <TextField inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'50%'}} className="textfield" floatingLabelStyle={floatingLabel} floatingLabelText="Цитата интервью"/>
            </div>
            <div style={{margin:'30px 0 30px 15px'}}>
                <span style={{fontSize:15}}><span className="title">Сюжет:</span><span style={{marginLeft: 32}}>Пенсионер-убийца из Флориды</span></span>
@@ -324,8 +324,8 @@ const ArticleEdit = React.createClass({
                <FlatButton style={{marginLeft:20}} label="Загрузить" primary={true}/>
            </div>
                <div>
-                   <TextField defaultValue="В США пенсионер застрелил больную жену из-за нехватки денег на лекарства" inputStyle={{paddingLeft:10, paddingRight:15}} floatingLabelStyle={floatingLabel} style={{width:'50%'}} floatingLabelText="Title для изображения"/>
-                   <TextField defaultValue="В США пенсионер застрелил больную жену из-за нехватки денег на лекарства" inputStyle={{paddingLeft:10, paddingRight:15}} floatingLabelStyle={floatingLabel} style={{width:'50%'}} floatingLabelText="Alt для изображения"/>
+                   <TextField defaultValue="В США пенсионер застрелил больную жену из-за нехватки денег на лекарства" inputStyle={{paddingLeft:10, paddingRight:15}} className="textfield" floatingLabelStyle={floatingLabel} style={{width:'50%'}} floatingLabelText="Title для изображения"/>
+                   <TextField defaultValue="В США пенсионер застрелил больную жену из-за нехватки денег на лекарства" inputStyle={{paddingLeft:10, paddingRight:15}}className="textfield" floatingLabelStyle={floatingLabel} style={{width:'50%'}} floatingLabelText="Alt для изображения"/>
                </div>
                <div style={{marginTop:30}}>
                    <div>
@@ -342,7 +342,12 @@ const ArticleEdit = React.createClass({
                                <MenuItem value="7" primaryText="Фото: Елена Крайнова (МТРК «Мир»)"/>
                                <MenuItem value="8" primaryText="Фото: Вадим Рабкин (МТРК «Мир»)"/>
                        </SelectField>
-                       <TextField  floatingLabelStyle={floatingLabel} defaultValue='Фото: "Department of Homeland Security":http://www.dhs.gov/' textareaStyle={{paddingRight:15}} style={{boxSizing:'border-box', paddingRight:15, marginTop:'-24px', width:'700px', paddingLeft:10, marginLeft:15}} floatingLabelText="Другой копирайт"/>
+                       <TextField  floatingLabelStyle={floatingLabel}
+                                   defaultValue='Фото: "Department of Homeland Security":http://www.dhs.gov/'
+                                   textareaStyle={{paddingRight:15}} style={{boxSizing:'border-box', paddingRight:15, marginTop:'-24px', width:'700px', paddingLeft:10, marginLeft:15}}
+                                   floatingLabelText="Другой копирайт"
+                                   className='textfield copy'
+                       />
                    </div>
                </div>
                <div style={{marginTop:30, marginLeft:15}}>
@@ -440,8 +445,8 @@ const ArticleEdit = React.createClass({
                <FlatButton style={{marginLeft:20}} label="Выбрать" secondary={true}/>
            </div>
            <div>
-               <TextField floatingLabelStyle={floatingLabel} inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'50%', boxSizing:'border-box', paddingRight:15}} floatingLabelText="Автор"/>
-               <TextField floatingLabelStyle={floatingLabel} inputStyle={{paddingLeft:10, paddingRight:15}} defaultValue="лекарства, застрелил, супруга, пенсионер, сша" style={{width:'50%'}} floatingLabelText="Теги"/>
+               <TextField floatingLabelStyle={floatingLabel} className="textfield" inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'50%', boxSizing:'border-box', paddingRight:15}} floatingLabelText="Автор"/>
+               <TextField floatingLabelStyle={floatingLabel} className="textfield" inputStyle={{paddingLeft:10, paddingRight:15}} defaultValue="лекарства, застрелил, супруга, пенсионер, сша" style={{width:'50%'}} floatingLabelText="Теги"/>
            </div>
            <div
                style={{marginTop:30}}

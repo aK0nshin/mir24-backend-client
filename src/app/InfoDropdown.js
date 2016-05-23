@@ -9,6 +9,7 @@ const InfoDropdown = React.createClass({
         }
     },
     handleEnter: function(event) {
+        event.preventDefault();
         this.setState({
             opened: true,
             anchorEl: event.currentTarget,

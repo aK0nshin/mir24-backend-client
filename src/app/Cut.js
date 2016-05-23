@@ -18,6 +18,7 @@ const Cut = React.createClass({
         }
     },
     showPopover: function (event) {
+        event.preventDefault();
         this.setState({
             opened: true,
             anchorEl: event.currentTarget

@@ -56,7 +56,7 @@ body {
   text-align:right;
 }
 td, th {
-  padding-left: 5px !important;
+  padding-left: 12px !important;
   padding-right: 5px !important;
 }
 .material-icons.badges {

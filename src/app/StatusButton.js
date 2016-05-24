@@ -17,7 +17,8 @@ const StatusButton = React.createClass({
             color: "#5C6BC0"
         }
     ],
-    changeStatus: function () {
+    changeStatus: function (event) {
+        event.preventDefault();
         this.setState({
             curStatus: this.state.curStatus<2 ? ++this.state.curStatus : 0
         });

@@ -71,7 +71,8 @@ const News = React.createClass({
             </TableRow>;
       });
     },
-    openDiff: function (value) {
+    openDiff: function (value, event) {
+        event.preventDefault();
         Ee.methods.emit('diffRequest', value);
     },
     smallAlert: function(){

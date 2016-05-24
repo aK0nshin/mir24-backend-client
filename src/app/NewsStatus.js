@@ -28,6 +28,7 @@ const NewsStatus = React.createClass({
         }
     },
     handleTap: function(event) {
+        event.preventDefault();
         this.setState({
             opened: true,
             anchorEl: event.currentTarget

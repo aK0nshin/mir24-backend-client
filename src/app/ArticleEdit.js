@@ -11,6 +11,7 @@ import FlatButton from 'material-ui/FlatButton';
 import IconButton from 'material-ui/IconButton';
 import StatusButton from './StatusButton';
 import CountedTextArea from './CountedTextArea';
+import NewsStatus from './NewsStatus';
 
 const date = new Date();
 date.setFullYear(date.getFullYear() - 1);
@@ -50,7 +51,7 @@ const ArticleEdit = React.createClass({
 
     render: function () {
        return <div>
-
+           <NewsStatus articleStatus='removed'/>
            <div className="dropboxes">
                <div>
                     <div className="box-title">

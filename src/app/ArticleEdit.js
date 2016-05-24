@@ -122,6 +122,11 @@ const ArticleEdit = React.createClass({
                             label="Снять с публикации через 36ч."
                         />
                     </div>
+                    <div>
+                        <Checkbox
+                            label="Промоблок"
+                        />
+                    </div>
                 </div>
            <div className='timeContainer'style={{margin: 'auto', height: 66, width: 777}}>
                <div className="time">

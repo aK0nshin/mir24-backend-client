@@ -335,7 +335,8 @@ const ArticleEdit = React.createClass({
            <div style={{marginTop:30, marginBottom:50, textAlign:'center'}}>
                 <StatusButton />
                 <RaisedButton labelColor='#FFF' backgroundColor='#66BB6A' style={{marginRight:20}} label="Сохранить"/>
-                <RaisedButton labelColor='#FFF' backgroundColor='#EF5350' label="Удалить"/>
+                <RaisedButton labelColor='#FFF' backgroundColor='#EF5350' style={{marginRight:20}} label="Удалить"/>
+                <RaisedButton labelColor='#FFF' backgroundColor='#1EA3E3' label="Посмотреть на сайте"/>
            </div>
        </div>
     }

@@ -219,3 +219,12 @@ span.title {
     column-count: 2;
   }
 }
+#statusBlock {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  text-align: center;
+  font-size: 18px;
+  color: #FFF;
+  z-index:2;
+}

@@ -34,7 +34,7 @@ const News = React.createClass({
                   {row.date.substr(0, 10)}
               </TableRowColumn>
               <TableRowColumn style={style}>
-                  <NewsStatus articleStatus={row.status}/>
+                  <NewsStatus articleStatus={row.status} showAsIcon='true' />
               </TableRowColumn>
               <TableRowColumn style={{width:80, padding:0, textAlign:'center'}}>
                   <FontIcon className="material-icons badges" style={{display:row.photo ? 'inline-block':'none'}}>

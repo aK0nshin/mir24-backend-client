@@ -52,6 +52,9 @@ const ArticleEdit = React.createClass({
     render: function () {
        return <div>
            <NewsStatus articleStatus='removed'/>
+           <div id="articleAutor">
+               <span className="title">Автор статьи:</span> <span>Пётр Васильков</span>
+           </div>
            <div className="dropboxes">
                <div>
                     <div className="box-title">

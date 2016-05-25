@@ -23,12 +23,12 @@ export default [
                 icon: 'movie'
             },
             {
-                name: 'Типы видео',
+                name: 'Промо',
                 link: '/sample',
-                icon: 'cloud'
+                icon: 'wallpaper'
             },
             {
-                name: 'Типы врезки',
+                name: 'Типы видео',
                 link: '/sample',
                 icon: 'cloud'
             },

@@ -23,7 +23,7 @@ You can also lint your code with:
 npm run lint
 ```
 
-You can run productioin build right from the 'build' folder with docker:
+You can start delivering production build right from the 'build' folder with docker:
 ```
 docker run -p 80:80 -itd  --name my-apache-app-7 -v "$PWD":/var/www/html php:7.0.6-apache &
 ```

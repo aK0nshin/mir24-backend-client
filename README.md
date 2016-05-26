@@ -25,5 +25,6 @@ npm run lint
 
 You can start delivering production build right from the 'build' folder with docker:
 ```
+cd build/
 docker run -p 80:80 -itd  --name my-apache-app-7 -v "$PWD":/var/www/html php:7.0.6-apache &
 ```

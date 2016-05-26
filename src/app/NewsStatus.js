@@ -28,8 +28,16 @@ const NewsStatus = React.createClass({
     },
     getInitialState: function () {
         return {
-            opened:false
+            opened:false,
+            display:'none',
+            selectedColor:'#00897B',
+            selectedIcon:'done'
         }
+    },
+    selectStatus: function(){
+        this.setState({
+            display: (this.state.display == 'none') ? 'block' : 'none'
+        });
     },
     handleTap: function(event) {
         event.preventDefault();
@@ -45,27 +53,39 @@ const NewsStatus = React.createClass({
     },
     render: function () {
         if (this.props.showAsIcon) {
-            if (this.props.articleStatus == 'embargo') {
-                return <div>
-                    <FontIcon onTouchTap={this.handleTap} className="material-icons"
-                              style={{color:this.statusIcons[this.props.articleStatus].color, cursor:'pointer'}}>{this.statusIcons[this.props.articleStatus].icon}</FontIcon>
-                    <Popover
-                        open={this.state.opened}
-                        anchorEl={this.state.anchorEl}
-                        anchorOrigin={{horizontal: 'left', vertical: 'bottom'}}
-                        targetOrigin={{horizontal: 'left', vertical: 'top'}}
-                        animated={false}
-                        onRequestClose={this.handleClose}
-                        style={{padding: "5px 10px"}}
-                    >
-                        Дата ожидаемой публикации: 2013-02-18 11:00:00
-                    </Popover>
+            if(this.props.selectForSearch){
+                return <div className="selectNewsStatus" onTouchTap={this.selectStatus}>
+                    <FontIcon className="material-icons statusSelecter" style={{display:this.state.display, color:this.state.selectedColor}}>
+                        {this.state.selectedIcon}
+                    </FontIcon>
+                    <FontIcon className="material-icons" style={{color:this.statusIcons[this.props.articleStatus].color}}>
+                        {this.statusIcons[this.props.articleStatus].icon}
+                    </FontIcon>
                 </div>
-            } else {
-                return <FontIcon className="material-icons"
-                                 style={{color:this.statusIcons[this.props.articleStatus].color}}>
-                    {this.statusIcons[this.props.articleStatus].icon}
-                </FontIcon>
+            }
+            else {
+                if (this.props.articleStatus == 'embargo') {
+                    return <div>
+                        <FontIcon onTouchTap={this.handleTap} className="material-icons"
+                                  style={{color:this.statusIcons[this.props.articleStatus].color, cursor:'pointer'}}>{this.statusIcons[this.props.articleStatus].icon}</FontIcon>
+                        <Popover
+                            open={this.state.opened}
+                            anchorEl={this.state.anchorEl}
+                            anchorOrigin={{horizontal: 'left', vertical: 'bottom'}}
+                            targetOrigin={{horizontal: 'left', vertical: 'top'}}
+                            animated={false}
+                            onRequestClose={this.handleClose}
+                            style={{padding: "5px 10px"}}
+                        >
+                            Дата ожидаемой публикации: 2013-02-18 11:00:00
+                        </Popover>
+                    </div>
+                } else {
+                    return <FontIcon className="material-icons"
+                                     style={{color:this.statusIcons[this.props.articleStatus].color}}>
+                        {this.statusIcons[this.props.articleStatus].icon}
+                    </FontIcon>
+                }
             }
         }else{
            return  <div id="statusBlock" style={{background:this.statusIcons[this.props.articleStatus].color}}>

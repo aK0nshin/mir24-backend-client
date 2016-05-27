@@ -28,7 +28,7 @@ const News = React.createClass({
           }
           return <TableRow style={{background: index%2==0 ? '#FFF' : '#E0E0E0'}} key={index}>
               <TableRowColumn style={style}>
-                  <InfoDropdown id={row.id}/>
+                  <InfoDropdown id={row.id} views={row.views}/>
               </TableRowColumn>
               <TableRowColumn style={{width:70}}>
                   {row.date.substr(0, 10)}

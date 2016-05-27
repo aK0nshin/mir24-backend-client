@@ -51,9 +51,9 @@ body {
 }
 .searchbox {
   margin-top: -50px;
-  margin-bottom: 20px;
   margin-right: 30px;
   text-align:right;
+    margin-bottom: 60px;
 }
 td, th {
   padding-left: 12px !important;
@@ -228,7 +228,7 @@ span.title {
   color: #FFF;
   z-index:2;
 }
-#articleAutor{
+#articleInfo{
     width: 100%;
     text-align: center;
     margin-bottom: 25px;
@@ -271,4 +271,12 @@ span.title {
 }
 .changePopover>div {
     z-index:1500 !important;
+}
+#viewsCount{
+    margin-right: 10px;
+    font-size: 14px;
+    float:right;
+}
+.autor{
+    margin-left: 88px;
 }

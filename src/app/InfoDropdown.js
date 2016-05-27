@@ -33,7 +33,8 @@ const InfoDropdown = React.createClass({
             onRequestClose={this.handleLeave}
             style={{padding: "5px 10px"}}
         >
-            ID: {this.props.id}
+            ID: {this.props.id}<br/>
+            Просмотров: {this.props.views}
             </Popover>
             </div>
     }

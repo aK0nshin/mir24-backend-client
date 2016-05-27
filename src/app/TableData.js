@@ -11,7 +11,8 @@ export default [
         status: 'active',
         photo: true,
         video: false,
-        gallery: true
+        gallery: true,
+        views:12
     },
     {
         id: '6530091',
@@ -25,7 +26,8 @@ export default [
         status:'embargo',
         photo: true,
         video: false,
-        gallery: true
+        gallery: true,
+        views:32
     },
     {
         id: '6530092',
@@ -39,7 +41,8 @@ export default [
         status:'active',
         photo: false,
         video: true,
-        gallery: true
+        gallery: true,
+        views:71
     },
     {
         id: '6530093',
@@ -53,7 +56,8 @@ export default [
         status:'active',
         photo: false,
         video: true,
-        gallery: true
+        gallery: true,
+        views:24
     },
     {
         id: '6530094',
@@ -67,7 +71,8 @@ export default [
         status:'removed',
         photo: true,
         video: true,
-        gallery: true
+        gallery: true,
+        views:15
     },
     {
         id: '6530095',
@@ -81,7 +86,8 @@ export default [
         status:'embargo',
         photo: true,
         video: true,
-        gallery: true
+        gallery: true,
+        views:47
     },
     {
         id: '6530096',
@@ -95,7 +101,8 @@ export default [
         status:'removed',
         photo: false,
         video: true,
-        gallery: true
+        gallery: true,
+        views:1
     },
     {
         id: '6530097',
@@ -109,7 +116,8 @@ export default [
         status:'inactive',
         photo: true,
         video: false,
-        gallery: true
+        gallery: true,
+        views:4
     },
     {
         id: '6530098',
@@ -123,7 +131,8 @@ export default [
         status:'inactive',
         photo: false,
         video: false,
-        gallery: false
+        gallery: false,
+        views:13
     },
     {
         id: '6530099',
@@ -137,7 +146,8 @@ export default [
         status:'embargo',
         photo: true,
         video: true,
-        gallery: false
+        gallery: false,
+        views:11
     },
     {
         id: '65380',
@@ -151,7 +161,8 @@ export default [
         status:'embargo',
         photo: true,
         video: false,
-        gallery: true
+        gallery: true,
+        views:20
     },
     {
         id: '653480',
@@ -165,7 +176,8 @@ export default [
         status:'active',
         photo: true,
         video: true,
-        gallery: false
+        gallery: false,
+        views:3
     },
     {
         id: '656580',
@@ -179,7 +191,8 @@ export default [
         status:'active',
         photo: true,
         video: false,
-        gallery: true
+        gallery: true,
+        views:62
     },
     {
         id: '6526580',
@@ -193,7 +206,8 @@ export default [
         status:'inactive',
         photo: true,
         video: true,
-        gallery: true
+        gallery: true,
+        views:7
     },
     {
         id: '435456',
@@ -207,6 +221,7 @@ export default [
         status:'active',
         photo: false,
         video: true,
-        gallery: true
-    },
+        gallery: true,
+        views:10
+    }
 ]

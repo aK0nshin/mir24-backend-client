@@ -107,29 +107,24 @@ const ArticleEdit = React.createClass({
                </div>
            </div>
                 <div className="checkboxes">
-                    <div>
+                    <div className="anrgyCheckbox">
                         <Checkbox
                             label="На главной в центре"  defaultChecked={true}
                         />
                     </div>
                     <div>
                         <Checkbox
-                            label="Новость часа"
+                            label="Молния"
                         />
                     </div>
-                    <div>
+                    <div className="anrgyCheckbox">
                     <Checkbox
                             label="На главной странице вверху"
                         />
                     </div>
                     <div>
                         <Checkbox
-                            label="Снять с публикации через 36ч."
-                        />
-                    </div>
-                    <div>
-                        <Checkbox
-                            label="Промоблок"
+                            label="Промо"
                         />
                     </div>
                 </div>
@@ -156,11 +151,6 @@ const ArticleEdit = React.createClass({
 
 Мужчина пояснил, что пять лет назад пара сообщила властям о банкротстве. Супругам стало не хватать средств на лекарства после недавнего роста цен на них, а обязательная  медицинская страховка стоимость препаратов не покрывала."
                             multiLine={true} floatingLabelStyle={floatingLabel} floatingLabelText="Текст"/>
-           <div>
-               <TextField inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'25%'}} className="textfield" floatingLabelStyle={floatingLabel} floatingLabelText="Фамилия интервьюируемого"/>
-               <TextField inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'25%'}} className="textfield" floatingLabelStyle={floatingLabel} floatingLabelText="Имя интервьюируемого"/>
-               <TextField inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'50%'}} className="textfield" floatingLabelStyle={floatingLabel} floatingLabelText="Цитата интервью"/>
-           </div>
            <div style={{margin:'30px 0 30px 15px'}}>
                <span style={{fontSize:15}}><span className="title">Сюжет:</span><span style={{marginLeft: 32}}>Пенсионер-убийца из Флориды</span></span>
                <FlatButton style={{marginLeft:20}} label="Редактировать" primary={true}/>
@@ -210,9 +200,14 @@ const ArticleEdit = React.createClass({
                        />
                    </div>
                </div>
-               <div style={{marginTop:30, marginLeft:15}}>
+               <div style={{marginTop:60, marginLeft:15}}>
                    <span className="title">Видео: </span>
                    <FlatButton style={{marginLeft:20}} label="Редактировать" primary={true}/>
+                   <div>
+                       <Checkbox style={{marginTop:30}}
+                           label="Снять с публикации через 36ч."
+                       />
+                   </div>
                </div>
 
                <Table
@@ -225,7 +220,7 @@ const ArticleEdit = React.createClass({
                        style={{border:'none'}}
                    >
                        <TableRow  displayBorder={false}>
-                           <TableHeaderColumn style={{textAlign:'center'}}>Страны</TableHeaderColumn>
+                           <TableHeaderColumn style={{textAlign:'center'}}>Филиалы</TableHeaderColumn>
                        </TableRow>
                    </TableHeader>
                    <TableBody displayRowCheckbox={false}>
@@ -264,38 +259,36 @@ const ArticleEdit = React.createClass({
                        <TableRow>
                            <TableRowColumn>
                                <Checkbox
-                                   label="Молдова"
-                               />
-                           </TableRowColumn>
-                           <TableRowColumn>
-                               <Checkbox
-                                   label="Россия" defaultChecked={true}
-                               />
-                           </TableRowColumn>
-                           <TableRowColumn>
-                               <Checkbox
                                    label="Таджикистан" defaultChecked={true}
-                               />
-                           </TableRowColumn>
-                           <TableRowColumn>
-                               <Checkbox
-                                   label="Туркменистан"
-                               />
-                           </TableRowColumn>
-                           <TableRowColumn>
-                               <Checkbox
-                                   label="Узбекистан"
-                               />
-                           </TableRowColumn>
-                           <TableRowColumn>
-                               <Checkbox
-                                   label="Украина"
                                />
                            </TableRowColumn>
                        </TableRow>
                    </TableBody>
                </Table>
-
+           <div className="geoTags">
+               <span className="title">Добавить ГЕО-тег:</span>
+               <SelectField autoWidth={true} style={{marginLeft:40, width:400}} onChange={this.copyrightChange} value={this.state.copyright} name="copyright">
+                   <MenuItem value="1" primaryText="Азербайджан "/>
+                   <MenuItem value="2" primaryText="Армения"/>
+                   <MenuItem value="3" primaryText="Беларусь"/>
+                   <MenuItem value="4" primaryText="Грузия"/>
+                   <MenuItem value="5" primaryText="Казахстан"/>
+                   <MenuItem value="6" primaryText="Кыргызстан"/>
+                   <MenuItem value="7" primaryText="Молдова"/>
+                   <MenuItem value="8" primaryText="Россия"/>
+                   <MenuItem value="9" primaryText="Таджикистан "/>
+                   <MenuItem value="10" primaryText="Туркменистан "/>
+                   <MenuItem value="11" primaryText="Узбекистан "/>
+                   <MenuItem value="12" primaryText="Украина"/>
+                   <MenuItem value="13" primaryText="Европа"/>
+                   <MenuItem value="14" primaryText="США и Канада"/>
+                   <MenuItem value="15" primaryText="Латинская Америка"/>
+                   <MenuItem value="16" primaryText="Африка"/>
+                   <MenuItem value="17" primaryText="Ближний восток"/>
+                   <MenuItem value="18" primaryText="Азия"/>
+                   <MenuItem value="19" primaryText="Австралия и океания"/>
+               </SelectField>
+           </div>
            <CountedTextArea inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'100%', marginTop:30}} floatingLabelStyle={floatingLabel} floatingLabelText="Заголовок для страницы Лучшие Новости"/>
            <CountedTextArea inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'100%'}} floatingLabelStyle={floatingLabel} floatingLabelText="Заголовок для: Выбор редакции, Автомир, Сейчас читают"/>
 

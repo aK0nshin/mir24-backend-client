@@ -269,7 +269,7 @@ span.title {
 .GoogleIt{
     border:1px solid #80DEEA;
 }
-.changePopover>div {
+.changePopover>*{
     z-index:1500 !important;
 }
 #viewsCount{
@@ -279,4 +279,7 @@ span.title {
 }
 .autor{
     margin-left: 88px;
+}
+body>div {
+  z-index:1500 !important;
 }

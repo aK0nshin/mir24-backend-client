@@ -23,7 +23,8 @@ const Search = React.createClass({
         event.preventDefault();
         this.setState({
             anchorEl: event.currentTarget,
-            open: true})
+            open: true});
+
     },
     render: function () {
         return <div className='searchbox' >
@@ -33,7 +34,6 @@ const Search = React.createClass({
                     search
                 </FontIcon>
             </RaisedButton>
-            <div className="changePopover">
                 <Popover
                     className="searchPopover"
                     open={this.state.open}
@@ -48,8 +48,8 @@ const Search = React.createClass({
                     <Checkbox label="Последним редактировал" />
                     <Checkbox label="Залил видео" />
                     <Checkbox label="Залил фото" />
-                    <DatePicker hintText="Дата" onChange={this.changeZIndex}/>
-                    <TimePicker hintText="Время" format="24hr" onChange={this.changeZIndex}/>
+                    <DatePicker hintText="Дата"/>
+                    <TimePicker hintText="Время" format="24hr"/>
                     <div className="searchStatus">
                         <NewsStatus articleStatus='active' showAsIcon='true' selectForSearch="true"/>
                         <NewsStatus articleStatus='inactive' showAsIcon='true' selectForSearch="true"/>
@@ -65,7 +65,6 @@ const Search = React.createClass({
                         <RaisedButton className="GoogleIt" label="Найти" onTouchTap= {this.closePopover} onRequestClose={this.closePopover}/>
                     </div>
                 </Popover>
-            </div>
         </div>;
     }
 });

@@ -28,7 +28,7 @@ const News = React.createClass({
           }
           return <TableRow style={{background: index%2==0 ? '#FFF' : '#E0E0E0'}} key={index}>
               <TableRowColumn style={style}>
-                  <InfoDropdown id={row.id} views={row.views}/>
+                  <InfoDropdown id={row.id}/>
               </TableRowColumn>
               <TableRowColumn style={{width:70}}>
                   {row.date.substr(0, 10)}
@@ -55,6 +55,9 @@ const News = React.createClass({
               </TableRowColumn>
               <TableRowColumn>
                   {row.rubric}
+              </TableRowColumn>
+              <TableRowColumn style={{style, width:'70px', textAlign:'center'}}>
+                  {row.views}
               </TableRowColumn>
               <TableRowColumn>
                   <Cut
@@ -117,7 +120,9 @@ const News = React.createClass({
                     <TableHeaderColumn style={{width:70}}>Время <Order row='Тут передадим поле для ордера'/></TableHeaderColumn>
                     <TableHeaderColumn tooltip="Заголовок новости" style={{width:'25%'}}>Заголовок</TableHeaderColumn>
                     <TableHeaderColumn tooltip="Супертег новости">Супертег <Order row='Тут передадим поле для ордера'/></TableHeaderColumn>
+                    <TableHeaderColumn style={{width:100}}>Просмотры <Order row='Тут передадим поле для ордера'/></TableHeaderColumn>
                     <TableHeaderColumn tooltip="Создал новость">Создал</TableHeaderColumn>
+
                 </TableRow>
             </TableHeader>
             <TableBody

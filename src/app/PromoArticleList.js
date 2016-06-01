@@ -13,6 +13,7 @@ const PromoArticleList = React.createClass({
 
     render: function () {
        return <div>
+                <p>PromoArticleList</p>
               </div>
     }
 });

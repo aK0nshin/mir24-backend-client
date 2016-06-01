@@ -1,4 +1,5 @@
 import React from 'react';
+import ArticleList from './PromoArticleList';
 
 const PromoLayoutMain = React.createClass({
 
@@ -13,6 +14,9 @@ const PromoLayoutMain = React.createClass({
 
     render: function () {
        return <div>
+                <p>PromoLayoutMain</p>
+                <ArticleList>
+                </ArticleList>
               </div>
     }
 });

@@ -4,6 +4,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import Main from './Main';
 import Sample from './Sample';
 import News from './News';
+import Promo from './Promo';
 import ArticleEdit from './ArticleEdit';
 import {Router, Route, browserHistory} from 'react-router';
 
@@ -20,6 +21,7 @@ ReactDOM.render(
         <Route path="/" component={Main}>
             <Route path="sample" component={Sample} />
             <Route path="news" component={News}/>
+            <Route path="promo" component={Promo}/>
             <Route path="article/edit" component={ArticleEdit} />
         </Route>
     </Router>,

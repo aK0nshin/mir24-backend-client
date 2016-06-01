@@ -24,7 +24,7 @@ export default [
             },
             {
                 name: 'Промо',
-                link: '/sample',
+                link: '/promo',
                 icon: 'wallpaper'
             },
             {

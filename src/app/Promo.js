@@ -26,23 +26,23 @@ const Promo = React.createClass({
 
     render: function () {
       return <div>
-        <Tabs>
-          <Tab label="Главная страница" >
-            <div>
-              <p>Главная</p>
-              <LayoutMain>
-              </LayoutMain>
+              <Tabs>
+                <Tab label="Главная страница" >
+                  <div>
+                    <p>Главная</p>
+                    <LayoutMain>
+                    </LayoutMain>
+                  </div>
+                </Tab>
+                <Tab label="Внутренняя страница" >
+                  <div>
+                    <p>Внутренняя</p>
+                    <LayoutPage>
+                    </LayoutPage>
+                  </div>
+                </Tab>
+              </Tabs>
             </div>
-          </Tab>
-          <Tab label="Внутренняя страница" >
-            <div>
-              <p>Внутренняя</p>
-              <LayoutPage>
-              </LayoutPage>
-            </div>
-          </Tab>
-        </Tabs>
-      </div>
     }
 });
 

@@ -5,70 +5,75 @@ export default [
             {
                 name: 'Новости',
                 link: '/news',
+                icon: 'news'
+            },
+            {
+                name: 'Статьи',
+                link: '/sample',
                 icon: 'assignment'
             },
             {
-                name: 'Лица мира',
+                name: 'Интерактив',
+                link: '/sample',
+                icon: 'extension'
+            },
+            {
+                name: 'Лица',
+                link: '/sample',
+                icon: 'face'
+            },
+            {
+                name: 'Сюжеты',
                 link: '/sample',
                 icon: 'fiber_new'
             },
             {
-                name: 'Название шоу',
-                link: '/sample',
-                icon: 'label outline'
-            },
-            {
-                name: 'Передачи',
+                name: 'Эпизоды',
                 link: '/sample',
                 icon: 'movie'
             },
             {
-                name: 'Промо',
+                name: 'Сеть вещания',
                 link: '/sample',
-                icon: 'wallpaper'
+                icon: 'explore'
             },
             {
-                name: 'Типы видео',
+                name: 'Новости сети вещания',
                 link: '/sample',
-                icon: 'cloud'
+                icon: 'receipt'
             },
             {
-                name: 'Типы врезки',
+                name: 'Релизы',
                 link: '/sample',
-                icon: 'cloud'
+                icon: 'fiber_new'
+            },
+            {
+                name: 'Вакансии',
+                link: '/sample',
+                icon: 'work'
             }
         ]
     },
     {
-        "section":"Администрирование",
+        "section":"Служебные",
         "listItems":[
             {
-                name: 'Пользователи',
+                name: 'Сообщения',
                 link: '/sample',
                 icon: 'cloud'
             },
             {
-                name: 'Конфигурации',
+                name: 'Фотобанк',
                 link: '/sample',
                 icon: 'cloud'
             },
             {
-                name: 'Сервис-провайдер',
+                name: 'Файлы',
                 link: '/sample',
                 icon: 'cloud'
             },
             {
-                name: 'Филиалы',
-                link: '/sample',
-                icon: 'cloud'
-            },
-            {
-                name: 'Роли пользователей',
-                link: '/sample',
-                icon: 'cloud'
-            },
-            {
-                name: 'Группы ролей',
+                name: 'Баннеры',
                 link: '/sample',
                 icon: 'cloud'
             }

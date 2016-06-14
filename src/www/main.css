@@ -104,6 +104,9 @@ span.title {
 .dropbox, .box-title {
   text-align: center;
 }
+.space{
+  height: 40px;
+}
 .dropboxes {
   height:60px;
   width: 800px;

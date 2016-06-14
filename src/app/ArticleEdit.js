@@ -56,6 +56,7 @@ const ArticleEdit = React.createClass({
                <span className="title autor">Автор статьи:</span> <span>Пётр Васильков</span>
                <span id="viewsCount">Просмотров:71</span>
            </div>
+           <div className="space"></div>
            <div className="dropboxes">
                <div>
                     <div className="box-title">
@@ -138,6 +139,7 @@ const ArticleEdit = React.createClass({
                     <DatePicker style={{float:'left'}} cancelLabel="Отмена" textFieldStyle={{width:140}} defaultDate={date} className="datePicker small" name="date" />
                </div>
            </div>
+           <div className="space"></div>
            <CountedTextArea style={{width:'100%'}} inputStyle={{paddingLeft:10}} value="В США пенсионер застрелил больную жену из-за нехватки денег на лекарства" floatingLabelStyle={floatingLabel} floatingLabelText="Заголовок"/>
            <CountedTextArea style={{width:'100%'}} textareaStyle={{paddingLeft:10}} value="Кэролин более 15 лет страдала от тяжелой формы артрита и других заболеваний. В последние дни ее боли стали невыносимыми, и она не раз говорила супругу, что хочет умереть. Тем не менее Кэролин не просила Хэйгера ее убивать." multiLine={true} floatingLabelStyle={{fontSize:20, paddingLeft:20}} floatingLabelText="Анонс"/>
            <CountedTextArea style={{width:'100%'}} textareaStyle={{paddingLeft:10}}
@@ -151,6 +153,7 @@ const ArticleEdit = React.createClass({
 
 Мужчина пояснил, что пять лет назад пара сообщила властям о банкротстве. Супругам стало не хватать средств на лекарства после недавнего роста цен на них, а обязательная  медицинская страховка стоимость препаратов не покрывала."
                             multiLine={true} floatingLabelStyle={floatingLabel} floatingLabelText="Текст"/>
+           <div className="space"></div>
            <div style={{margin:'30px 0 30px 15px'}}>
                <span style={{fontSize:15}}><span className="title">Сюжет:</span><span style={{marginLeft: 32}}>Пенсионер-убийца из Флориды</span></span>
                <FlatButton style={{marginLeft:20}} label="Редактировать" primary={true}/>
@@ -159,6 +162,7 @@ const ArticleEdit = React.createClass({
                <span style={{fontSize:15}}><span className="title">Связанные новости:</span><span style={{marginLeft: 32}}>В Киевской области пенсионер застрелил жену и покончил с собой</span></span>
                <FlatButton style={{marginLeft:20}} label="Редактировать" primary={true}/>
            </div>
+           <div className="space"></div>
            <div style={{margin:'30px 0 30px 15px'}}>
                <span className="title">Изображение: </span>
                <IconButton
@@ -200,6 +204,7 @@ const ArticleEdit = React.createClass({
                        />
                    </div>
                </div>
+               <div className="space"></div>
                <div style={{marginTop:60, marginLeft:15}}>
                    <span className="title">Видео: </span>
                    <FlatButton style={{marginLeft:20}} label="Редактировать" primary={true}/>
@@ -209,7 +214,7 @@ const ArticleEdit = React.createClass({
                        />
                    </div>
                </div>
-
+               <div className="space"></div>
                <Table
                    selectable={false}
                    multiSelectable={false}
@@ -289,9 +294,9 @@ const ArticleEdit = React.createClass({
                    <MenuItem value="19" primaryText="Австралия и океания"/>
                </SelectField>
            </div>
+           <div className="space"></div>
            <CountedTextArea inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'100%', marginTop:30}} floatingLabelStyle={floatingLabel} floatingLabelText="Заголовок для страницы Лучшие Новости"/>
            <CountedTextArea inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'100%'}} floatingLabelStyle={floatingLabel} floatingLabelText="Заголовок для: Выбор редакции, Автомир, Сейчас читают"/>
-
            <div style={{margin:'30px 0 30px 15px'}}>
                <span className="title">Ролик: </span>
                <FlatButton style={{marginLeft:20}} label="Загрузить" primary={true}/>
@@ -301,6 +306,7 @@ const ArticleEdit = React.createClass({
                <TextField floatingLabelStyle={floatingLabel} className="textfield" inputStyle={{paddingLeft:10, paddingRight:15}} style={{width:'50%', boxSizing:'border-box', paddingRight:15}} floatingLabelText="Автор"/>
                <TextField floatingLabelStyle={floatingLabel} className="textfield" inputStyle={{paddingLeft:10, paddingRight:15}} defaultValue="лекарства, застрелил, супруга, пенсионер, сша" style={{width:'50%'}} floatingLabelText="Теги"/>
            </div>
+           <div className="space"></div>
                <div className="redaction">
                    <div>
                        <div className="redaction-title">
@@ -335,6 +341,7 @@ const ArticleEdit = React.createClass({
                        </div>
                    </div>
                </div>
+               <div className="space"></div>
            <div style={{marginTop:30, marginBottom:50, textAlign:'center'}}>
                 <StatusButton />
                 <RaisedButton labelColor='#FFF' backgroundColor='#66BB6A' style={{marginRight:20}} label="Сохранить"/>
